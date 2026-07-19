@@ -1,0 +1,50 @@
+# IDE
+.idea/
+.vscode/
+!.vscode/extensions.json
+node_modules
+**/*.pdf
+**/*.bak
+**/*.swp
+**/*~
+
+# direnv
+.direnv/
+
+# MacOS clutter
+**/.DS_Store
+
+# Local ci
+.gitlab-ci-local/
+vars.env
+errors.txt
+results.json
+
+# Local config
+.foundry
+foundryconfig.json
+
+# Build
+dist/
+docs/
+src/packs/other/changelog
+
+# Playwright — generated output is ignored; the committed config files are not.
+.playwright/*
+!.playwright/playwright.config.mjs
+!.playwright/playwright-mcp.config.json
+
+# Images dropped in the repo root (e.g. screenshots) — not committed
+/*.png
+/*.jpg
+/*.jpeg
+/*.gif
+/*.webp
+
+# Ryan's temp files
+**/foo*
+**/bar*
+src/packs.*
+
+# LLMs
+.claude/worktrees

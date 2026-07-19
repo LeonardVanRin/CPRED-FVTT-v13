@@ -1,0 +1,73 @@
+# CI is provided by the shared cprc-cicd components (the single source of jobs).
+# See https://gitlab.com/cyberpunk-red-team/cprc-cicd. Image, stages, and the
+# shared rules come from jobs/init/config.yml.
+include:
+  - project: "cyberpunk-red-team/cprc-cicd"
+    ref: dev
+    file:
+      - "/jobs/init/config.yml"
+      # Test
+      - "/jobs/test/babele-skills.yml"
+      - "/jobs/test/changelog-has-changed.yml"
+      - "/jobs/test/code-localization.yml"
+      - "/jobs/test/compendia-use.yml"
+      - "/jobs/test/docs.yml"
+      - "/jobs/test/game-id.yml"
+      - "/jobs/test/handlebars-attributes.yml"
+      - "/jobs/test/handlebars-compare.yml"
+      - "/jobs/test/handlebars-helpers.yml"
+      - "/jobs/test/handlebars-inlinestyles.yml"
+      - "/jobs/test/handlebars-skill-localization.yml"
+      - "/jobs/test/handlebars-tags.yml"
+      - "/jobs/test/handlebars-templates.yml"
+      - "/jobs/test/handlebars-tooltips.yml"
+      - "/jobs/test/language-babele.yml"
+      - "/jobs/test/language-exists.yml"
+      - "/jobs/test/language-unused-strings.yml"
+      - "/jobs/test/lint-code.yml"
+      - "/jobs/test/lint-css.yml"
+      - "/jobs/test/lint-json.yml"
+      - "/jobs/test/lint-markdown.yml"
+      - "/jobs/test/lint-yaml.yml"
+      - "/jobs/test/packs.yml"
+      - "/jobs/test/prepare-foundry.yml"
+      - "/jobs/test/test-browser.yml"
+      - "/jobs/test/test-browser-report.yml"
+      - "/jobs/test/test-build.yml"
+      - "/jobs/test/test-fontawesome.yml"
+      - "/jobs/test/test-shell-scripts.yml"
+      - "/jobs/test/test-unit.yml"
+      # Build / release
+      - "/jobs/release/build-artifacts.yml"
+      - "/jobs/release/create-release.yml"
+      - "/jobs/release/pre-release.yml"
+      - "/jobs/release/publish.yml"
+      - "/jobs/release/pages.yml"
+      - "/jobs/release/announce.yml"
+      # Manage
+      - "/jobs/manage/delete-packages-dev.yml"
+      - "/jobs/manage/manage-issues-on-mr.yml"
+      - "/jobs/manage/manage-issues-on-merge.yml"
+      - "/jobs/manage/manage-issues-on-release.yml"
+
+  # Jobs that carry inputs are their own include entries.
+  - project: "cyberpunk-red-team/cprc-cicd"
+    ref: dev
+    file: "/jobs/init/init.yml"
+    inputs:
+      gitlab_tokens_to_test: "CHOOM_BOT_API"
+
+  # Scope prettier to the source we format (en babele included; translations,
+  # schema, licenses, etc. excluded).
+  - project: "cyberpunk-red-team/cprc-cicd"
+    ref: dev
+    file: "/jobs/test/code-formatting.yml"
+    inputs:
+      paths: "gulpfile.mjs gulp/*.mjs src/*.js src/modules src/**/*.yaml src/*.json src/**/*.json src/css/**/*.css src/babele/en/*.json"
+
+  # Block manual edits to the vendored cprc-build gulp subtree.
+  - project: "cyberpunk-red-team/cprc-cicd"
+    ref: dev
+    file: "/jobs/test/subtree-guard.yml"
+    inputs:
+      component_repo: "cyberpunk-red-team/cprc-build"

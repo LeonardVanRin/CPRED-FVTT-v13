@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/fallow-rs/fallow/main/schema.json",
+
+  // Foundry declares the runtime entry in src/system.json ("esmodules"), not in
+  // package.json — so fallow's auto-detection finds nothing. Declare it explicitly.
+  "entry": [
+    "src/cpr.js"
+  ],
+
+  // src/modules/system/hooks.js registers these 28 files via a computed
+  // `import("../hooks/" + path)` that static analysis can't follow. Treat the dir
+  // as runtime-loaded so the files aren't flagged as unused.
+  "dynamicallyLoaded": [
+    "src/modules/hooks/**/*.js"
+  ],
+
+  // Scope analysis to the Foundry system source. The gulp build tooling is a
+  // separate entry tree (gulpfile.mjs -> gulp/*.mjs) invoked via `npx gulp`;
+  // exclude it so its files aren't reported as unreachable.
+  "ignorePatterns": [
+    "gulpfile.mjs",
+    "gulp/**",
+    "stylelint.config.mjs",
+    "vitest.config.js",
+    ".playwright/**",
+    "tools/**",
+    "tests/**"
+  ],
+
+  // These are all build / lint / CLI tooling (or build-time deps used by the gulp
+  // pack compiler, e.g. abstract-level / classic-level). The shipped runtime
+  // (src/cpr.js) relies on Foundry's globals and imports almost no npm packages, so
+  // scoped-to-runtime analysis sees them as unused. They ARE used — by the gulp build
+  // we exclude above — so treat them as always-used rather than flagging them.
+  "ignoreDependencies": [
+    "@foundryvtt/foundryvtt-cli",
+    "@playwright/test",
+    "lint",
+    "abstract-level",
+    "autoprefixer",
+    "chalk",
+    "classic-level",
+    "date-fns",
+    "docdash",
+    "editorconfig-checker",
+    "eslint-config-prettier",
+    "eslint-plugin-import",
+    "fallow",
+    "fancy-log",
+    "fancylog",
+    "fs-extra",
+    "gitlab-ci-local",
+    "gulp-cli",
+    "gulp-postcss",
+    "gulp-svgmin",
+    "js-yaml",
+    "jsonlint-mod",
+    "markdown-it",
+    "marked",
+    "merge-stream",
+    "minimatch",
+    "postcss-import",
+    "postcss-mixins",
+    "postcss-nested",
+    "sanitize-filename",
+    "through2",
+    "v8r",
+    "vinyl-fs",
+    "vitest",
+    "@vitest/coverage-v8",
+    "yargs"
+  ],
+
+  // Foundry's engine invokes lifecycle methods (prepareData, _onRender, create,
+  // applyActiveEffects, ...) via its framework, not through imports fallow can see, so
+  // it can't tell they're used. That makes unused-class-members almost entirely false
+  // positives for a Foundry system. Turn it off (flip to "warn" to see them again).
+  "rules": {
+    "unused-class-members": "off"
+  }
+}
