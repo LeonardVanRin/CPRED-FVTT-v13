@@ -1,0 +1,29 @@
+_id: M3e3FRdQh8ulyrsE
+_key: "!items!M3e3FRdQh8ulyrsE"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/default/Default_Skill.svg
+name: Local Expert (New Westbrook)
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: false
+  category: educationSkills
+  core: false
+  description:
+    value: ""
+  difficulty: typical
+  favorite: false
+  level: 0
+  skillType: generic
+  sources:
+    - book: Core
+      page: 135
+  stat: int
+type: skill
