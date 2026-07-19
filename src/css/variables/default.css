@@ -1,0 +1,138 @@
+/*
+ * Define all variables in this file
+ *
+ * We do not use less variables (@) for colors or fonts in other files.
+ * We use css variables to allow users to modify our css easily.
+ *
+ * All css variable must be prefixed with '--cpr-' to avoid namespace issues
+ */
+:root {
+  /* Fonts */
+  --cpr-font-hero: "Rubik";
+  --cpr-font-journal-header: "Rubik";
+  --cpr-font-pause: "Tektur";
+  --cpr-font-primary: "Jost";
+  --cpr-font-smallest: 0.6rem;
+  --cpr-font-smaller: 0.7rem;
+  --cpr-font-small: 0.9rem;
+  --cpr-font-normal: 1rem;
+  --cpr-font-large: 1.5rem;
+  --cpr-font-larger: 1.7rem;
+  --cpr-font-largest: 2rem;
+  --cpr-font-massive: 4rem;
+
+  /* Color variables */
+
+  /* Used for common colors within the default theme */
+  --cpr-color-black: #000;
+  --cpr-color-blue: #2b6cb0;
+  --cpr-color-dark-grey: #444;
+  --cpr-color-faded-black: rgb(0 0 0 / 60%);
+  --cpr-color-green: #2f855a;
+  --cpr-color-light-grey: #9e9f9f;
+  --cpr-color-medium-grey: #666;
+  --cpr-color-near-black: #0d0b0c;
+  --cpr-color-off-black: #222;
+  --cpr-color-pink: #ffc3b6;
+  --cpr-color-red: #b90202;
+  --cpr-color-white: #eaeaea;
+
+  /* Document browser tri-state filter toggles */
+  --cpr-background-tristate-include: var(--cpr-color-blue);
+  --cpr-background-tristate-exclude: var(--cpr-color-red);
+  --cpr-background-tristate-only: var(--cpr-color-green);
+
+  /* Document browser mode buttons (Item / Actor selectors): the active button
+     highlights a readable blue, the inactive one matches the search/price input
+     fields. */
+  --cpr-button-active: var(--cpr-color-blue);
+  --cpr-button-inactive: var(--cpr-background-foundry-input);
+
+  /* Background Colors */
+  --cpr-background-border: var(--cpr-color-red);
+  --cpr-background-box: var(--cpr-color-white);
+  --cpr-background-chat-border: var(--cpr-color-light-grey);
+  --cpr-background-chat-card-block-before: var(--cpr-color-white);
+  --cpr-background-chat-card-block: var(--cpr-color-red);
+  --cpr-background-chat-card: var(--cpr-color-white);
+  --cpr-background-chat-inline-roll: rgb(0 0 0 / 10%);
+  --cpr-background-chat: var(--cpr-color-faded-black);
+  --cpr-background-code: var(--cpr-color-light-grey);
+  --cpr-background-content-link: #ddd;
+  --cpr-background-cyberdeck-section-header: var(--cpr-color-pink);
+  --cpr-background-dialog-border: var(--cpr-color-red);
+  --cpr-background-dialog-hr-gradient-end: var(--cpr-color-black);
+  --cpr-background-dialog-hr-gradient-middle: rgb(136 34 34 / 75%);
+  --cpr-background-dialog-hr-gradient-start: var(--cpr-color-black);
+  --cpr-background-dialog-selected: var(--cpr-color-pink);
+  --cpr-background-editor-button-selected: var(--cpr-color-light-grey);
+  --cpr-background-editor-header: var(--cpr-color-white);
+  --cpr-background-foundry-button: var(--cpr-color-white);
+  --cpr-background-foundry-hover: var(--cpr-color-red);
+  --cpr-background-foundry-input: var(--cpr-color-white);
+  --cpr-background-header: var(--cpr-color-near-black);
+  --cpr-background-item-dir-installed-header: rgb(18 18 18 / 60%);
+  --cpr-background-journal-blockquote: #c9c8c5;
+  --cpr-background-journal-info: rgb(24 144 231 / 30%);
+  --cpr-background-journal-secret-hidden-background: rgb(128 45 204 / 20%);
+  --cpr-background-journal-secret-hidden-border: rgb(128 45 204);
+  --cpr-background-migration-modal-backdrop: rgb(0 0 0 / 75%);
+  --cpr-background-migration-progress: rgb(27 151 11);
+  --cpr-background-pill: var(--cpr-color-off-black);
+  --cpr-background-progress-border: #b2c3ff;
+  --cpr-background-progress-label: var(--cpr-color-faded-black);
+  --cpr-background-progress: #5d49ff;
+  --cpr-background-row-even: var(--cpr-color-white);
+  --cpr-background-row-odd: var(--cpr-color-pink);
+  --cpr-background-tab-active: var(--cpr-color-red);
+  --cpr-background-tab-inactive: var(--cpr-color-off-black);
+  --cpr-background-tab-underlay: var(--cpr-color-pink);
+  --cpr-background-toggle-checked: var(--cpr-background-border);
+  --cpr-background-toggle-dot: var(--cpr-color-white);
+  --cpr-background-toggle-unchecked: var(--cpr-color-dark-grey);
+  --cpr-background-window: var(--cpr-color-white);
+
+  /* UI Colors */
+  --cpr-item-dir-border: rgb(158 159 159 / 60%);
+  --cpr-migration-overlay-error: rgb(156 18 18 / 70%);
+  --cpr-migration-overlay-success: rgb(30 125 34 / 70%);
+  --cpr-migration-overlay-warning: rgb(156 123 30 / 70%);
+  --cpr-pause-highlight1: #1bc7fb;
+  --cpr-pause-highlight2: #e0287d;
+  --cpr-pause-text: var(--cpr-color-white);
+
+  /* Text Colors */
+  --cpr-text-chat-failure: var(--cpr-color-red);
+  --cpr-text-chat-normal: var(--cpr-color-near-black);
+  --cpr-text-chat-success: #609040;
+  --cpr-text-content-link-icon: #ddd;
+  --cpr-text-editor-button: var(--cpr-color-black);
+  --cpr-text-editor-header: var(--cpr-color-black);
+  --cpr-text-foundry-hint: var(--cpr-color-near-black);
+  --cpr-text-foundry-hover: var(--cpr-color-red);
+  --cpr-text-foundry-input: var(--cpr-color-black);
+  --cpr-text-header-arrow: var(--cpr-color-red);
+  --cpr-text-header-line-box: var(--cpr-color-black);
+  --cpr-text-header-line: var(--cpr-color-red);
+  --cpr-text-header: var(--cpr-color-white);
+  --cpr-text-hint: var(--cpr-color-near-black);
+  --cpr-text-icon-dimmed: var(--cpr-color-light-grey);
+  --cpr-text-icon-highlight: var(--cpr-color-red);
+  --cpr-text-icon-normal: var(--cpr-color-near-black);
+  --cpr-text-input: var(--cpr-color-black);
+  --cpr-text-journal-table-header: var(--cpr-color-white);
+  --cpr-text-mook-header: var(--cpr-color-white);
+  --cpr-text-mook-name: var(--cpr-color-white);
+  --cpr-text-mook-normal: var(--cpr-color-near-black);
+  --cpr-text-normal: var(--cpr-color-near-black);
+  --cpr-text-pill: var(--cpr-color-white);
+  --cpr-text-tab-highlight: #ffff3f;
+  --cpr-text-tab-normal: var(--cpr-color-white);
+  --cpr-text-window: var(--cpr-color-black);
+  --cpr-text-pause: var(--cpr-color-white);
+  --cpr-text-dir-list: var(--cpr-color-near-black);
+
+  /* Icon Colors */
+  --cpr-icon-actor-image-overlay-border: var(--cpr-color-red);
+  --cpr-icon-actor-image-overlay: var(--cpr-color-white);
+}
