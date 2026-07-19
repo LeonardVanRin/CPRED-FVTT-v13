@@ -1,0 +1,47 @@
+_id: zbGmb4qw3DWOX9c5
+_key: "!items!zbGmb4qw3DWOX9c5"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/clothing/generic_footwear.svg
+name: Asia Pop Footwear
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        Following the latest Asian fashion trends, Asia Pop is sure to catch the eye
+        with it's bright colors and extravagant style.
+      </p>
+  equipped: owned
+  favorite: false
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: false
+  price:
+    market: 100
+  providesHardening: false
+  revealed: true
+  sources:
+    - book: Core
+      page: 356
+  style: asiaPop
+  type: footwear
+  usage: equipped
+type: clothing

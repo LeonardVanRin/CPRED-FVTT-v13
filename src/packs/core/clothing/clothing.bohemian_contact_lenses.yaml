@@ -1,0 +1,48 @@
+_id: i519Cys4b0yd1Cr0
+_key: "!items!i519Cys4b0yd1Cr0"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: >-
+  systems/cyberpunk-red-core/icons/compendium/clothing/generic_contact_lenses.svg
+name: Bohemian Contact Lenses
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        Channel your inner 70s hippy! Show everyone how much of a free spirit you are
+        with these clothes.
+      </p>
+  equipped: owned
+  favorite: false
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: false
+  price:
+    market: 10
+  providesHardening: false
+  revealed: true
+  sources:
+    - book: Core
+      page: 356
+  style: bohemian
+  type: contactLenses
+  usage: equipped
+type: clothing

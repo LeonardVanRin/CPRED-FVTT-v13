@@ -1,0 +1,47 @@
+_id: RaaoLjnQAWDI1ovs
+_key: "!items!RaaoLjnQAWDI1ovs"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/clothing/generic_bottoms.svg
+name: Bag Lady Chic Bottoms
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        Follow the latest dumpster diver fashion trends! Torn and worn out clothes,
+        perfect if you want that homeless look.
+      </p>
+  equipped: owned
+  favorite: false
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: false
+  price:
+    market: 20
+  providesHardening: false
+  revealed: true
+  sources:
+    - book: Core
+      page: 356
+  style: bagLadyChic
+  type: bottoms
+  usage: equipped
+type: clothing

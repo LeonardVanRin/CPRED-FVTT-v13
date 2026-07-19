@@ -1,0 +1,47 @@
+_id: JP2GQY2TWRuIWOmw
+_key: "!items!JP2GQY2TWRuIWOmw"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/clothing/generic_glasses.svg
+name: Asia Pop Glasses
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        Following the latest Asian fashion trends, Asia Pop is sure to catch the eye
+        with it's bright colors and extravagant style.
+      </p>
+  equipped: owned
+  favorite: false
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: false
+  price:
+    market: 100
+  providesHardening: false
+  revealed: true
+  sources:
+    - book: Core
+      page: 356
+  style: asiaPop
+  type: glasses
+  usage: equipped
+type: clothing

@@ -1,0 +1,47 @@
+_id: pBeQLCw69Zbb11gc
+_key: "!items!pBeQLCw69Zbb11gc"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/clothing/generic_bottoms.svg
+name: Generic Chic Bottoms
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        The kind of clothing you find in the Mega-Plexes of the Dark Future. Perfect
+        if you don't want to stand out from a crowd.
+      </p>
+  equipped: owned
+  favorite: false
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: false
+  price:
+    market: 50
+  providesHardening: false
+  revealed: true
+  sources:
+    - book: Core
+      page: 356
+  style: genericChic
+  type: bottoms
+  usage: equipped
+type: clothing

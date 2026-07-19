@@ -1,0 +1,47 @@
+_id: 8wOCTUwRwIWMdbEH
+_key: "!items!8wOCTUwRwIWMdbEH"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/clothing/generic_hat.svg
+name: Leisurewear Hat
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        Your run-of-the-mill athletic clothing. Perfect to go for a jog or to relax at
+        home.
+      </p>
+  equipped: owned
+  favorite: false
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: false
+  price:
+    market: 50
+  providesHardening: false
+  revealed: true
+  sources:
+    - book: Core
+      page: 356
+  style: leisurewear
+  type: hats
+  usage: equipped
+type: clothing
