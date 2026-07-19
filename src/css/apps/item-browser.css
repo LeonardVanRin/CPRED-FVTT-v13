@@ -1,0 +1,801 @@
+.cpr-document-browser .window-content {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "globals globals"
+    "sidebar results";
+  column-gap: 0.5rem;
+  row-gap: 0;
+  overflow: hidden;
+  background: var(--cpr-background-window);
+  color: var(--cpr-text-normal);
+}
+
+/* Global filters across the top, on a single line. The grid mirrors the
+   sidebar/results columns below (same tracks + gap), so the search sits exactly
+   over the sidebar and the filters over the results list. */
+.cpr-browser-globals {
+  grid-area: globals;
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  column-gap: 0.5rem;
+  align-items: center;
+  padding-bottom: 0.5rem;
+}
+
+/* Inset the search to the sidebar's content edge: reserve the same scrollbar
+   gutter the sidebar groups reserve, plus the sidebar's own right padding. */
+.cpr-browser-globals .cpr-browser-global-search {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  padding-right: 0.4rem;
+}
+
+.cpr-browser-globals .cpr-browser-name-input {
+  width: 100%;
+}
+
+/* The price/category/quality filters sit over the results list and are spread
+   evenly across its width. The reserved scrollbar gutter (matching the list's
+   thin scrollbar) keeps their right edge aligned with the list rows' edge rather
+   than overhanging the scrollbar. */
+.cpr-browser-global-filters {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+/* Each filter field is label-beside-inputs so the whole bar is one row. */
+.cpr-browser-global-filters .cpr-browser-field {
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cpr-browser-globals .cpr-browser-field > label {
+  white-space: nowrap;
+}
+
+.cpr-browser-globals .cpr-browser-field-row > input {
+  width: 4rem;
+}
+
+.cpr-browser-globals .cpr-browser-quality {
+  width: 7rem;
+}
+
+/* Left filter sidebar */
+.cpr-browser-sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-right: 0.4rem;
+  overflow: hidden;
+}
+
+.cpr-browser-sidebar-scroll {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+
+  /* Always reserve the scrollbar gutter so the boxes' right edge is stable
+     (and matches the top search bar) whether or not the sidebar is scrolling. */
+  scrollbar-gutter: stable;
+}
+
+.cpr-browser-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cpr-browser-field > label,
+.cpr-browser-filter-boolean-wrap > label {
+  font-size: var(--cpr-font-small);
+  color: var(--cpr-text-hint);
+}
+
+.cpr-browser-field-row {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.cpr-browser-field-row > * {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Give every filter control the same input background and the system's default
+   text colour: the top-bar search and price inputs, the quality/price-category
+   selects, and the cart's buying-for select. Without the colour, form controls
+   inherit Foundry's cream AppV2 tint instead of the window text. The
+   `.window-content input`/`select` qualifier outweighs main.css's generic
+   `.application .window-content …` rules that would otherwise win. */
+.cpr-document-browser .window-content input.cpr-browser-name-input,
+.cpr-document-browser .window-content input.cpr-browser-price-min,
+.cpr-document-browser .window-content input.cpr-browser-price-max,
+.cpr-document-browser .window-content select.cpr-browser-price-category-op,
+.cpr-document-browser .window-content select.cpr-browser-price-category-value,
+.cpr-document-browser .window-content select.cpr-browser-quality,
+.cpr-document-browser .window-content select.cpr-browser-cart-actor-select {
+  background: var(--cpr-background-foundry-input);
+  color: var(--cpr-text-normal);
+}
+
+/* Placeholder text uses the hint colour in the sidebar inputs and the top-bar
+   search/price inputs alike; without the top-bar rule they inherit Foundry's
+   cream placeholder tint while their neighbouring selects show themed text. */
+.cpr-document-browser .cpr-browser-sidebar input::placeholder,
+.cpr-document-browser .window-content input.cpr-browser-name-input::placeholder,
+.cpr-document-browser .window-content input.cpr-browser-price-min::placeholder,
+.cpr-document-browser .window-content input.cpr-browser-price-max::placeholder {
+  color: var(--cpr-text-hint);
+}
+
+.cpr-browser-sidebar-actions {
+  flex: 0 0 auto;
+}
+
+/* Collapsible filter groups: hide the fieldset box (but keep the legend) when
+   collapsed, and hide the body. */
+.cpr-browser-collapse-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.cpr-browser-collapse-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: 0.25rem;
+}
+
+.cpr-browser-filter.cpr-browser-collapsed {
+  border-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.cpr-browser-collapsed .cpr-browser-collapse-body {
+  display: none;
+}
+
+/* Match the sidebar action buttons and the cart's Purchase button to the top
+   mode buttons (the generic Foundry button border/background would otherwise
+   make them look different). The `.window-content button` qualifier outweighs
+   main.css's generic rule. */
+.cpr-document-browser .window-content button.cpr-browser-icon-button,
+.cpr-document-browser .window-content button.cpr-browser-cart-purchase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.5rem;
+  border: none;
+  cursor: pointer;
+  background: var(--cpr-button-inactive);
+  color: var(--cpr-text-normal);
+}
+
+.cpr-document-browser .window-content button.cpr-browser-icon-button:hover,
+.cpr-document-browser .window-content button.cpr-browser-cart-purchase:hover {
+  background: var(--cpr-background-foundry-hover);
+  color: var(--cpr-text-foundry-hover);
+}
+
+/* Filters */
+.cpr-browser-filter {
+  /* Fieldsets default to min-width:min-content, which would let the number-range
+     inputs force the sidebar wider (horizontal scroll); allow them to shrink. */
+  min-width: 0;
+  padding: 0.25rem 0.5rem;
+  border: 0.063rem solid var(--cpr-background-border);
+}
+
+.cpr-browser-filter legend {
+  font-size: var(--cpr-font-small);
+  color: var(--cpr-text-hint);
+}
+
+.cpr-browser-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  /* Indent the option rows under their sub-label so they read as a tree. */
+  padding-left: 0.75rem;
+}
+
+.cpr-browser-filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Tri-state include/exclude/only slider toggles (migration-toggle styled) */
+.cpr-browser-tristate-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cpr-browser-tristate-label {
+  font-size: var(--cpr-font-small);
+}
+
+/* Per-type filter boxes (one collapsible box per item type). */
+.cpr-browser-typebox-head {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.cpr-browser-typebox-toggle {
+  flex: 1;
+}
+
+.cpr-browser-typebox-toggle .cpr-browser-tree-type-label {
+  flex: 1;
+}
+
+.cpr-browser-hidden {
+  display: none;
+}
+
+.cpr-browser-tree-type-label {
+  font-weight: bold;
+}
+
+/* A filter sub-group within a type box (a set list, range, boolean or toggle). */
+.cpr-browser-filter-sub {
+  margin-top: 0.35rem;
+}
+
+.cpr-browser-filter-sub:first-child {
+  margin-top: 0;
+}
+
+.cpr-browser-filter-sublabel,
+.cpr-browser-range-row > label {
+  font-size: var(--cpr-font-small);
+  color: var(--cpr-text-hint);
+}
+
+.cpr-browser-filter-sublabel {
+  margin-bottom: 0.15rem;
+}
+
+/* Range filters render on one line: `Label [min] [max]`. */
+.cpr-browser-range-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Fixed label width so the min/max inputs start at the same x across every
+   category's range rows (widest label is "Damage Dice"). Longer translations
+   ellipsis rather than overflow or push the inputs out of alignment. */
+.cpr-browser-range-row > label {
+  flex: 0 0 5.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.cpr-browser-range-row > .cpr-browser-field-row {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Filters revealed beneath a tri-state toggle (e.g. cyberweapon stats). */
+.cpr-browser-toggle-nested {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+  padding-left: 0.6rem;
+  border-left: 0.063rem solid var(--cpr-background-border);
+}
+
+/* Outweigh the .cpr-browser-toggle-nested display:flex above (same specificity)
+   so adding .cpr-browser-hidden actually collapses the nested filters. */
+.cpr-browser-toggle-nested.cpr-browser-hidden {
+  display: none;
+}
+
+.cpr-document-browser .cpr-browser-tristate {
+  --cpr-tristate-height: 0.9rem;
+  --cpr-tristate-pad: 0.14rem;
+  --cpr-tristate-width: calc(var(--cpr-tristate-height) * 1.5);
+  --cpr-tristate-dot: calc(
+    var(--cpr-tristate-height) - (var(--cpr-tristate-pad) * 2)
+  );
+  --cpr-tristate-travel: calc(
+    var(--cpr-tristate-width) - var(--cpr-tristate-dot) -
+      (var(--cpr-tristate-pad) * 2)
+  );
+
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+  width: var(--cpr-tristate-width);
+  height: var(--cpr-tristate-height);
+  border-radius: var(--cpr-tristate-height);
+  cursor: pointer;
+  background-color: var(--cpr-background-toggle-unchecked);
+  box-shadow: inset 0 0.05rem 0.12rem var(--cpr-color-faded-black);
+  transition: background-color 0.2s;
+}
+
+.cpr-document-browser .cpr-browser-tristate::before {
+  content: "";
+  position: absolute;
+  top: var(--cpr-tristate-pad);
+  left: var(--cpr-tristate-pad);
+  width: var(--cpr-tristate-dot);
+  height: var(--cpr-tristate-dot);
+  border-radius: 50%;
+  background-color: var(--cpr-color-white);
+  transition: transform 0.2s;
+}
+
+.cpr-document-browser .cpr-browser-tristate-exclude {
+  background-color: var(--cpr-background-tristate-exclude);
+}
+
+.cpr-document-browser .cpr-browser-tristate-include {
+  background-color: var(--cpr-background-tristate-include);
+}
+
+.cpr-document-browser .cpr-browser-tristate-only {
+  background-color: var(--cpr-background-tristate-only);
+}
+
+.cpr-document-browser .cpr-browser-tristate-include::before {
+  transform: translateX(calc(var(--cpr-tristate-travel) / 2));
+}
+
+.cpr-document-browser .cpr-browser-tristate-only::before {
+  transform: translateX(var(--cpr-tristate-travel));
+}
+
+/* Results list */
+.cpr-browser-results {
+  grid-area: results;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cpr-browser-results-list {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+/* Type group header, styled like the gear tab section headers; click to
+   collapse/expand the group. */
+.cpr-browser-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: var(--cpr-font-small);
+  background: var(--cpr-background-header);
+  color: var(--cpr-text-header);
+  cursor: pointer;
+}
+
+/* Rows hidden because their group is collapsed (outweighs the entry/installed
+   display rules at equal specificity). */
+.cpr-browser-entry.cpr-browser-hidden,
+.cpr-browser-installed.cpr-browser-hidden {
+  display: none;
+}
+
+/* Each entry is a card: the clickable thumb+body opens the item, an action
+   column (expand/buy) sits at the right edge. */
+.cpr-browser-entry {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  gap: 0.5rem;
+  padding: 0.3rem 0.5rem;
+}
+
+/* The whole card opens the item; the action-column controls keep their own
+   actions. It wraps the shared `.item-header-body` (which owns the internal
+   icon + text layout), so it just needs to fill its grid cell. */
+.cpr-browser-entry-open {
+  display: block;
+  min-width: 0;
+  cursor: pointer;
+}
+
+/* The shared header icon is 3.875rem on the sheet; browser rows are denser, so
+   shrink it (still square, no border, no clip — those come from the shared
+   `.item-header-body .item-image` rules). */
+.cpr-browser-entry .item-image {
+  width: 3rem;
+  height: 3rem;
+}
+
+.cpr-browser-cart-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+/* Zebra striping by an explicit parity class set per result (in #appendBatch),
+   not :nth-child — the list interleaves group headers and installed-item rows as
+   siblings, which would throw nth-child's alternation off. */
+.cpr-browser-entry-odd {
+  background: var(--cpr-background-row-odd);
+}
+
+.cpr-browser-entry-even {
+  background: var(--cpr-background-row-even);
+}
+
+.cpr-browser-chip {
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.15rem;
+  font-size: var(--cpr-font-smaller);
+  white-space: nowrap;
+  color: var(--cpr-text-header);
+  background: var(--cpr-background-header);
+}
+
+.cpr-browser-expand {
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Action column (expand + buy), stacked at the card's right edge. */
+.cpr-browser-entry-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.cpr-browser-buy {
+  cursor: pointer;
+}
+
+/* Installed-items tree under an expanded row. The shared renderer emits the
+   sheets' markup (which is only styled inside .items-list), so it is restyled
+   here to read cleanly in the browser's read-only view. */
+.cpr-browser-installed {
+  list-style: none;
+  padding: 0 0.4rem 0.2rem 2.75rem;
+  background: var(--cpr-background-row-even);
+}
+
+.cpr-browser-installed .sub-list ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cpr-browser-installed li.item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0;
+  font-size: var(--cpr-font-small);
+}
+
+.cpr-browser-installed li.item + li.item {
+  border-top: 0.063rem solid var(--cpr-background-border);
+}
+
+.cpr-browser-installed .name {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+/* Type chip in front of each installed item's name. */
+.cpr-browser-installed .type-tag {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 3.166rem;
+  padding: 0.05rem 0.15rem;
+  border-radius: 0.1rem;
+  font-size: var(--cpr-font-smallest);
+  font-weight: 500;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+  color: var(--cpr-color-white);
+  background-color: var(--cpr-background-border);
+}
+
+/* Indent nested install levels (more specific than the base li.item rule). */
+.cpr-browser-installed li.item[data-row-level="1"] {
+  padding-left: 1rem;
+}
+
+.cpr-browser-installed li.item[data-row-level="2"] {
+  padding-left: 2rem;
+}
+
+.cpr-browser-installed li.item[data-row-level="3"] {
+  padding-left: 3rem;
+}
+
+/* Footer + loading indicator */
+.cpr-browser-results-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.4rem;
+  font-size: var(--cpr-font-small);
+  color: var(--cpr-text-hint);
+}
+
+.cpr-browser-spinner {
+  display: none;
+}
+
+/* The footer only matters while results are still loading. */
+.cpr-browser-results-footer:not(.cpr-browser-loading) {
+  display: none;
+}
+
+.cpr-browser-results-footer.cpr-browser-loading .cpr-browser-spinner {
+  display: inline-block;
+}
+
+.cpr-browser-empty {
+  padding: 1rem;
+  text-align: center;
+  color: var(--cpr-text-hint);
+}
+
+/* Sidebar launch button */
+.cpr-browser-launch {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Browser compendia settings: cap the scrollable list so the window fits a
+   1080p screen and scrolls (the Save footer is a separate, pinned part). */
+.cpr-browser-compendia-settings {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Browser compendia settings: grouped list with a header per source (carrying a
+   checkbox that toggles/collapses the whole group) and tight single-line rows
+   (label + checkbox) so long names don't wrap mid-way. */
+.cpr-browser-compendia-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.5rem 0 0.1rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 0.063rem solid var(--cpr-background-border);
+}
+
+.cpr-browser-compendia-group-toggle {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.cpr-browser-compendia-group-name {
+  flex: 1;
+}
+
+.cpr-browser-compendia-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 0.5rem;
+  line-height: 1.4;
+}
+
+.cpr-browser-compendia-row label {
+  flex: 1;
+  margin: 0;
+}
+
+.cpr-browser-compendia-row input {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+/* A fully-disabled group hides its pack rows. */
+.cpr-browser-compendia-collapsed .cpr-browser-compendia-row {
+  display: none;
+}
+
+/* Shopping cart — appears only once items are added, widening the window. */
+.cpr-document-browser.cpr-browser-has-cart .window-content {
+  grid-template-columns: 16rem 1fr 15rem;
+  grid-template-areas:
+    "globals globals cart"
+    "sidebar results cart";
+}
+
+.cpr-document-browser:not(.cpr-browser-has-cart) .cpr-browser-cart {
+  display: none;
+}
+
+.cpr-browser-cart {
+  grid-area: cart;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-left: 0.4rem;
+  border-left: 0.063rem solid var(--cpr-background-border);
+}
+
+/* Cart panel title. It's an <h3>, so Foundry's AppV2 heading styling tints it
+   cream and competes with the .text-hero utility class; re-assert the hero font
+   and a white text colour (scoped to outweigh `.application` headings) so it
+   matches the actor-name hero text. */
+.cpr-document-browser .cpr-browser-cart-header {
+  flex: 0 0 auto;
+  margin: 0 0 0.25rem;
+  text-align: center;
+  font-family: var(--cpr-font-hero);
+  font-weight: 800;
+  font-variant: small-caps;
+  color: var(--cpr-text-normal);
+}
+
+.cpr-browser-cart-list {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.cpr-browser-cart-item {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr auto 1rem;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0;
+}
+
+.cpr-browser-cart-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.cpr-browser-cart-name {
+  align-self: stretch;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Quantity stepper beneath the cart item's name. */
+.cpr-browser-cart-qty {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--cpr-font-small);
+}
+
+.cpr-browser-cart-step {
+  cursor: pointer;
+  width: 1rem;
+  text-align: center;
+}
+
+.cpr-browser-cart-qty-value {
+  min-width: 0.9rem;
+  text-align: center;
+}
+
+.cpr-browser-cart-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: var(--cpr-font-smaller);
+}
+
+.cpr-browser-cart-category {
+  color: var(--cpr-text-hint);
+}
+
+.cpr-browser-cart-remove {
+  cursor: pointer;
+}
+
+.cpr-browser-cart-empty {
+  flex: 1;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--cpr-text-hint);
+}
+
+.cpr-browser-cart-footer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-top: 0.4rem;
+  border-top: 0.063rem solid var(--cpr-background-border);
+}
+
+/* Buying-for field: label beside the select, styled exactly like the top-bar
+   `Quality` filter (.cpr-browser-global-filters .cpr-browser-field), overriding
+   .cpr-browser-field's stacked column layout. */
+.cpr-browser-cart-actor {
+  flex: 0 0 auto;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.cpr-browser-cart-actor > label {
+  white-space: nowrap;
+}
+
+.cpr-browser-cart-actor select {
+  flex: 1;
+  min-width: 0;
+}
+
+.cpr-browser-cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* Purchase-log chat message */
+.cpr-purchase-log-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cpr-purchase-log-line {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cpr-purchase-log-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: cover;
+}
+
+.cpr-purchase-log-cost {
+  margin-left: auto;
+}
+
+.cpr-purchase-log-total {
+  text-align: right;
+}
