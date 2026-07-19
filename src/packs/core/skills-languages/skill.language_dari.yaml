@@ -1,0 +1,29 @@
+_id: YRHphYoSxb1xYvl2
+_key: "!items!YRHphYoSxb1xYvl2"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/default/Default_Skill.svg
+name: Language (Dari)
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: false
+  category: educationSkills
+  core: false
+  description:
+    value: ""
+  difficulty: typical
+  favorite: false
+  level: 4
+  skillType: language
+  sources:
+    - book: Core
+      page: 45
+  stat: int
+type: skill
