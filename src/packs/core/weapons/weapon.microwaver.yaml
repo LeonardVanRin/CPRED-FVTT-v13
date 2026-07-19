@@ -1,0 +1,78 @@
+_id: oQ4mV07fh1et5zI7
+_key: "!items!oQ4mV07fh1et5zI7"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 42
+      previous: "41"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/weapons/microwaver.svg
+name: Microwaver
+ownership:
+  default: 0
+sort: 0
+system:
+  ammoVariety:
+    - battery
+  attackmod: 0
+  brand: ""
+  canIgnoreArmor: false
+  concealable:
+    concealable: false
+    isConcealed: false
+  critFailEffect: jammed
+  damage: "0"
+  damageCrit:
+    bonus: 5
+    count: 2
+    threshold: 0
+  description:
+    value: |
+      <p>
+        An Exotic Very Heavy Pistol. Causes cyberware or electrical components to be
+        rendered inoperable for a minute unless the target passes a
+        <strong>DV15 Cybertech Check</strong>.
+      </p>
+      <p>
+        <em
+          >Select target token and use
+          @UUID[Compendium.cyberpunk-red-core.other_macros.Macro.z8NN97JkdZUUFYud]{Get
+          EMP'd Items} to determine what items are affected.</em
+        >
+      </p>
+  dvTable: DV Pistol
+  equipped: owned
+  favorite: false
+  fireModes:
+    autoFire: 0
+    suppressiveFire: false
+  handsReq: 1
+  ignoreArmorPercent: 0
+  ignoreBelowSP: 0
+  installedItems:
+    allowed: true
+    allowedTypes:
+      - ammo
+    list: []
+    slots: 0
+    usedSlots: 0
+  isRanged: true
+  magazine:
+    ammoData: null
+    max: 8
+    value: 0
+  price:
+    market: 500
+  quality: standard
+  revealed: true
+  rof: 1
+  sources:
+    - book: Core
+      page: 348
+  unarmedAutomaticCalculation: true
+  usage: equipped
+  usesType: magazine
+  weaponSkill: Handgun
+  weaponType: vHeavyPistol
+type: weapon
