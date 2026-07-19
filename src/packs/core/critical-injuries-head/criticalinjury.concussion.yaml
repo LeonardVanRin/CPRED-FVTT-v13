@@ -1,0 +1,81 @@
+_id: yyVVirrpH1O0DMYB
+_key: "!items!yyVVirrpH1O0DMYB"
+effects:
+  - _id: OnONUXyMY8mOquf7
+    _key: "!items.effects!yyVVirrpH1O0DMYB.OnONUXyMY8mOquf7"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    changes:
+      - key: bonuses.allActions
+        mode: 2
+        priority: null
+        value: "-2"
+    description: ""
+    disabled: false
+    duration:
+      combat: null
+      rounds: null
+      seconds: null
+      startRound: null
+      startTime: null
+      startTurn: null
+      turns: null
+    flags:
+      cyberpunk-red-core:
+        changes:
+          cats:
+            "0": misc
+          situational:
+            "0":
+              isSituational: false
+              onByDefault: false
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/concussion.svg
+    name: Concussion
+    origin: null
+    sort: 0
+    statuses: []
+    system: {}
+    tint: "#ffffff"
+    transfer: true
+    type: base
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/critical_injuries/concussion.svg
+name: Concussion
+ownership:
+  default: 0
+sort: 0
+system:
+  deathSaveIncrease: false
+  description:
+    value: |
+      <p>-2 to every action.</p>
+  favorite: false
+  location: head
+  quickFix:
+    dvFirstAid: 13
+    dvParamedic: 13
+    type: firstAidParamedic
+  revealed: true
+  sources:
+    - book: Core
+      page: 188
+  treatment:
+    dvParamedic: 0
+    dvSurgery: 0
+    type: quickFix
+  usage: toggled
+type: criticalInjury
