@@ -1,0 +1,53 @@
+_id: 1DmAuk2SsgDh0YqG
+_key: "!items!1DmAuk2SsgDh0YqG"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 42
+      previous: "41"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/ammo/bow_poison.svg
+name: Arrow (Poison)
+ownership:
+  default: 0
+sort: 0
+system:
+  ablationValue: 0
+  amount: 10
+  brand: ""
+  concealable:
+    concealable: true
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        No immediate damage. If meat target hit,
+        <strong>DV13 Resist Torture/Drugs</strong> Check. On a fail 2d6 damage to HP.
+        No Ablation.
+      </p>
+  favorite: false
+  installLocation: mall
+  overrides:
+    autofire:
+      minimum: 3
+      mode: none
+      value: -1
+    crit:
+      bonus: 5
+      count: 2
+      override: false
+      threshold: 0
+    damage:
+      minimum: 1d6
+      mode: set
+      value: 2d6
+  price:
+    market: 100
+  size: 0
+  sources:
+    - book: Core
+      page: 346
+  type: poison
+  variety: arrow
+type: ammo

@@ -1,0 +1,52 @@
+_id: WOJD6hQVUVEK8AsJ
+_key: "!items!WOJD6hQVUVEK8AsJ"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 42
+      previous: "41"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/ammo/pistolheavy_rubber.svg
+name: Heavy Pistol (Rubber)
+ownership:
+  default: 0
+sort: 0
+system:
+  ablationValue: 0
+  amount: 10
+  brand: ""
+  concealable:
+    concealable: true
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        Does not cause Critical Injury. Does not ablate armor. Leaves target at
+        minimum 1hp. Counts as Basic ammo for exotic weapons
+      </p>
+  favorite: false
+  installLocation: mall
+  overrides:
+    autofire:
+      minimum: 3
+      mode: none
+      value: -1
+    crit:
+      bonus: 5
+      count: 0
+      override: true
+      threshold: 0
+    damage:
+      minimum: 1d6
+      mode: none
+      value: 3d6
+  price:
+    market: 10
+  size: 0
+  sources:
+    - book: Core
+      page: 346
+  type: rubber
+  variety: heavyPistol
+type: ammo

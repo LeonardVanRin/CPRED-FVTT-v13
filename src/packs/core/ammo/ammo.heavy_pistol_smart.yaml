@@ -1,0 +1,53 @@
+_id: 314PiB9i0ahRqfZv
+_key: "!items!314PiB9i0ahRqfZv"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 42
+      previous: "41"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/ammo/pistolheavy_smart.svg
+name: Heavy Pistol (Smart)
+ownership:
+  default: 0
+sort: 0
+system:
+  ablationValue: 1
+  amount: 10
+  brand: ""
+  concealable:
+    concealable: true
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        Req Targeting Scope Cyberware, otherwise won't fire. If miss single attack by
+        4 or less, roll second attack at same DV 1d10+10 (not normal stat). Can add
+        luck. Target can dodge the second roll as normal if able to do so.
+      </p>
+  favorite: false
+  installLocation: mall
+  overrides:
+    autofire:
+      minimum: 3
+      mode: none
+      value: -1
+    crit:
+      bonus: 5
+      count: 2
+      override: false
+      threshold: 0
+    damage:
+      minimum: 1d6
+      mode: none
+      value: 3d6
+  price:
+    market: 500
+  size: 0
+  sources:
+    - book: Core
+      page: 346
+  type: smart
+  variety: heavyPistol
+type: ammo
