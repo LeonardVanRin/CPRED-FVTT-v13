@@ -1,0 +1,38 @@
+_id: Ek251OMdphcqzWPP
+_key: "!items!Ek251OMdphcqzWPP"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/default/Default_Role.svg
+name: Media
+ownership:
+  default: 0
+sort: 0
+system:
+  abilities: []
+  addRoleAbilityRank: true
+  bonusRatio: 1
+  bonuses: []
+  description:
+    value: |
+      <p>
+        Newspeople, influencers, and cultural phenomena, they are ready to expose the
+        truth by any means necessary.
+      </p>
+  favorite: false
+  hasRoll: true
+  isSituational: false
+  mainRoleAbility: Credibility
+  onByDefault: false
+  rank: 4
+  skill: "--"
+  sources:
+    - book: Core
+      page: 151
+  stat: "--"
+  universalBonuses: []
+type: role
