@@ -1,0 +1,386 @@
+{
+  "version": "DUMMY_VALUE",
+  "flags": {
+    "featureVideoURL": ""
+  },
+  "id": "cyberpunk-red-core",
+  "title": "Cyberpunk RED - CORE",
+  "description": "Implementation of the Cyberpunk RED, Core Rules, for FVTT",
+  "compatibility": {
+    "minimum": 13,
+    "verified": 13,
+    "maximum": 13
+  },
+  "authors": [
+    {
+      "name": "The Project Red Team",
+      "url": "https://gitlab.com/cyberpunk-red-team/fvtt-cyberpunk-red-core"
+    }
+  ],
+  "esmodules": ["cpr.js"],
+  "styles": [
+    {
+      "src": "css/main.css",
+      "layer": "system"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Cyberpunk RED: Core",
+      "sorting": "m",
+      "packs": [
+        "core_ammo",
+        "core_armor",
+        "core_clothing",
+        "core_critical-injuries-body",
+        "core_critical-injuries-head",
+        "core_cyberware",
+        "core_drugs",
+        "core_gear",
+        "core_programs",
+        "core_roles",
+        "core_skills-languages",
+        "core_skills-local-expert",
+        "core_skills-martial-arts",
+        "core_skills-play-instrument",
+        "core_skills-science",
+        "core_upgrades",
+        "core_vehicles",
+        "core_weapons",
+        "core_weapons-branded"
+      ]
+    },
+    {
+      "name": "Cyberpunk RED: Other",
+      "sorting": "m",
+      "packs": ["other_macros", "other_scenes", "other_changelog"]
+    }
+  ],
+  "packs": [
+    {
+      "label": "Ammo",
+      "type": "Item",
+      "name": "core_ammo",
+      "path": "packs/core/ammo",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Armor",
+      "type": "Item",
+      "name": "core_armor",
+      "path": "packs/core/armor",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Clothing",
+      "type": "Item",
+      "name": "core_clothing",
+      "path": "packs/core/clothing",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Critical Injuries (Body)",
+      "type": "Item",
+      "name": "core_critical-injuries-body",
+      "path": "packs/core/critical-injuries-body",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Critical Injuries (Head)",
+      "type": "Item",
+      "name": "core_critical-injuries-head",
+      "path": "packs/core/critical-injuries-head",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Cyberware",
+      "type": "Item",
+      "name": "core_cyberware",
+      "path": "packs/core/cyberware",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Drugs",
+      "type": "Item",
+      "name": "core_drugs",
+      "path": "packs/core/drugs",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Gear",
+      "type": "Item",
+      "name": "core_gear",
+      "path": "packs/core/gear",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Programs",
+      "type": "Item",
+      "name": "core_programs",
+      "path": "packs/core/programs",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Roles",
+      "type": "Item",
+      "name": "core_roles",
+      "path": "packs/core/roles",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Skills (Languages)",
+      "type": "Item",
+      "name": "core_skills-languages",
+      "path": "packs/core/skills-languages",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Skills (Local Expert)",
+      "type": "Item",
+      "name": "core_skills-local-expert",
+      "path": "packs/core/skills-local-expert",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Skills (Martial Arts)",
+      "type": "Item",
+      "name": "core_skills-martial-arts",
+      "path": "packs/core/skills-martial-arts",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Skills (Play Instrument)",
+      "type": "Item",
+      "name": "core_skills-play-instrument",
+      "path": "packs/core/skills-play-instrument",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Skills (Science)",
+      "type": "Item",
+      "name": "core_skills-science",
+      "path": "packs/core/skills-science",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Upgrades",
+      "type": "Item",
+      "name": "core_upgrades",
+      "path": "packs/core/upgrades",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Vehicles",
+      "type": "Item",
+      "name": "core_vehicles",
+      "path": "packs/core/vehicles",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Weapons",
+      "type": "Item",
+      "name": "core_weapons",
+      "path": "packs/core/weapons",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Weapons (Branded)",
+      "type": "Item",
+      "name": "core_weapons-branded",
+      "path": "packs/core/weapons-branded",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Critical Injury Tables",
+      "type": "RollTable",
+      "name": "internal_critical-injury-tables",
+      "path": "packs/internal/critical-injury-tables",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
+        "ASSISTANT": "NONE",
+        "GAMEMASTER": "NONE"
+      }
+    },
+    {
+      "label": "Cyberware (Core)",
+      "type": "Item",
+      "name": "internal_cyberware-core",
+      "path": "packs/internal/cyberware-core",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
+        "ASSISTANT": "NONE",
+        "GAMEMASTER": "NONE"
+      }
+    },
+    {
+      "label": "DV Rolltables",
+      "type": "RollTable",
+      "name": "internal_dv-tables",
+      "path": "packs/internal/dv-tables",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
+        "ASSISTANT": "NONE",
+        "GAMEMASTER": "NONE"
+      }
+    },
+    {
+      "label": "Skills",
+      "type": "Item",
+      "name": "internal_skills",
+      "path": "packs/internal/skills",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
+        "ASSISTANT": "NONE",
+        "GAMEMASTER": "NONE"
+      }
+    },
+    {
+      "label": "NET Architecture Rolltables",
+      "type": "RollTable",
+      "name": "internal_net-rolltables",
+      "path": "packs/internal/net-rolltables",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
+        "ASSISTANT": "NONE",
+        "GAMEMASTER": "NONE"
+      }
+    },
+    {
+      "label": "Changelog",
+      "type": "JournalEntry",
+      "name": "other_changelog",
+      "path": "packs/other/changelog",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Macros",
+      "type": "Macro",
+      "name": "other_macros",
+      "path": "packs/other/macros",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    },
+    {
+      "label": "Scenes",
+      "type": "Scene",
+      "name": "other_scenes",
+      "path": "packs/other/scenes",
+      "system": "cyberpunk-red-core",
+      "banner": "systems/cyberpunk-red-core/images/compendium-banner.webp"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "zh-CN",
+      "name": "Chinese Simplified",
+      "path": "lang/zh-CN.json"
+    },
+    {
+      "lang": "zh-TW",
+      "name": "Chinese Traditional",
+      "path": "lang/zh-TW.json"
+    },
+    {
+      "lang": "cz",
+      "name": "Czech",
+      "path": "lang/cz.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch (German)",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "it",
+      "name": "Italian",
+      "path": "lang/it.json"
+    },
+    {
+      "lang": "ja-JP",
+      "name": "Japanese",
+      "path": "lang/ja-JP.json"
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
+    },
+    {
+      "lang": "ru",
+      "name": "Russian",
+      "path": "lang/ru.json"
+    },
+    {
+      "lang": "uk-UA",
+      "name": "Ukrainian",
+      "path": "lang/uk-UA.json"
+    }
+  ],
+  "initiative": "1d10 + @stats.ref.value",
+  "grid": {
+    "distance": 2,
+    "units": "m"
+  },
+  "primaryTokenAttribute": "derivedStats.hp",
+  "secondaryTokenAttribute": null,
+  "background": "systems/cyberpunk-red-core/images/Foundry-Background.webp",
+  "url": "https://gitlab.com/cyberpunk-red-team/fvtt-cyberpunk-red-core",
+  "manifest": "https://gitlab.com/api/v4/projects/22820629/packages/generic/fvtt-cyberpunk-red-core/latest/system.json",
+  "download": "DUMMY_VALUE",
+  "license": "GPL v3"
+}
