@@ -1,0 +1,32 @@
+/* For stats that have 2 values (HP, Humanity, Luck, Emp) */
+.min-of-max-container {
+  display: flex;
+
+  input[type="number"] {
+    min-width: 0;
+    flex: 1 0;
+    background-color: var(--cpr-background-box);
+    border: 0;
+    outline: 0;
+    border-radius: unset;
+
+    /* Workaround for suspected webkit bug */
+    &:hover {
+      backface-visibility: visible;
+    }
+  }
+
+  .of-stat {
+    flex: 0 1;
+    font-size: 75%;
+    align-self: center;
+    padding: 0 0.125rem 0.063rem;
+  }
+
+  .of {
+    flex: 0 1;
+    font-size: 75%;
+    align-self: center;
+    padding: 0 0.125rem;
+  }
+}
