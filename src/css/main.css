@@ -1,0 +1,94 @@
+@import url("apps/index.css");
+@import url("chat/index.css");
+@import url("compatability/index.css");
+@import url("elements/index.css");
+@import url("layout/index.css");
+@import url("sheets/index.css");
+@import url("variables/index.css");
+
+/*
+ * Everything below is scoped to CPR's own windows (sheets, dialogs, apps) and,
+ * where noted, journal page content — the only places we theme. Foundry and
+ * other modules keep their own styling. Our stylesheet sits on the @system
+ * cascade layer (see src/system.json).
+ */
+
+.application .window-content.cpr-sheet-content {
+  padding: 0;
+}
+
+/* Thin scrollbars inside our own windows and journal page content. */
+:is(
+    .actor-sheet,
+    .blackice-sheet,
+    .container-sheet,
+    .demon-sheet,
+    .dialog-sheet,
+    .item-sheet,
+    .mook-sheet,
+    .cpr-migration-dialog,
+    .releasenotes,
+    .journal-entry-content,
+    .journal-page-content,
+    .journal-sheet-container
+  )
+  :is(div, section) {
+  scrollbar-width: thin;
+}
+
+/* Our font, only within our own windows. */
+.actor-sheet,
+.blackice-sheet,
+.container-sheet,
+.demon-sheet,
+.dialog-sheet,
+.item-sheet,
+.mook-sheet,
+.cpr-migration-dialog,
+.releasenotes {
+  font-family: var(--cpr-font-primary);
+}
+
+/* Editors inside our windows and journal page content. */
+:is(
+    .actor-sheet,
+    .blackice-sheet,
+    .container-sheet,
+    .demon-sheet,
+    .dialog-sheet,
+    .item-sheet,
+    .mook-sheet,
+    .cpr-migration-dialog,
+    .releasenotes,
+    .journal-entry-content,
+    .journal-page-content,
+    .journal-sheet-container
+  )
+  .editor {
+  flex: 1 0 auto;
+  padding: 0;
+  min-height: 100%;
+
+  .tox-toolbar-overlord,
+  .tox-toolbar__primary {
+    background: none;
+  }
+}
+
+:is(
+    .actor-sheet,
+    .blackice-sheet,
+    .container-sheet,
+    .demon-sheet,
+    .dialog-sheet,
+    .item-sheet,
+    .mook-sheet,
+    .cpr-migration-dialog,
+    .releasenotes,
+    .journal-entry-content,
+    .journal-page-content,
+    .journal-sheet-container
+  )
+  .editor-content {
+  padding: 0.313rem;
+}
