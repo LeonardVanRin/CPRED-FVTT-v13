@@ -1,0 +1,40 @@
+_id: x0E0hYFqfP3qJGPT
+_key: "!items!x0E0hYFqfP3qJGPT"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/vehicles/speed_boat.svg
+name: Jetski
+ownership:
+  default: 0
+sort: 0
+system:
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>A common CHOOH<sup>2</sup>-powered jetski that can seat two people.</p>
+  favorite: false
+  installedItems:
+    allowed: true
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  price:
+    market: 20000
+  sdp: 35
+  seats: 2
+  sources:
+    - book: Core
+      page: 190
+  speedCombat: 20
+  speedNarrative: 60 MPH / 97 KPH
+type: vehicle

@@ -1,0 +1,40 @@
+_id: p4jR9nv6Ob90axwL
+_key: "!items!p4jR9nv6Ob90axwL"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/vehicles/motorbike.svg
+name: Superbike
+ownership:
+  default: 0
+sort: 0
+system:
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>A beefed-up version of a roadbike, capable of very high speeds.</p>
+  favorite: false
+  installedItems:
+    allowed: true
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  price:
+    market: 100000
+  sdp: 35
+  seats: 2
+  sources:
+    - book: Core
+      page: 190
+  speedCombat: 60
+  speedNarrative: 300 MPH / 483 KPH
+type: vehicle
