@@ -1,0 +1,72 @@
+html[data-cpr-theme="dark"] {
+  --cpr-background-border: var(--cpr-dark-main);
+  --cpr-background-box: var(--cpr-dark-background);
+  --cpr-background-chat-border: #999;
+  --cpr-background-chat-card-block-before: #3b3b3b;
+  --cpr-background-chat-card-block: var(--cpr-dark-main);
+  --cpr-background-chat-card: var(--cpr-dark-background);
+  --cpr-background-code: #3b3b3b;
+  --cpr-background-content-link: #3b3b3b;
+  --cpr-background-cyberdeck-section-header: #414a4c;
+  --cpr-background-dialog-border: var(--cpr-dark-main);
+  --cpr-background-dialog-hr-gradient-end: #394867;
+  --cpr-background-dialog-hr-gradient-middle: #bcccdc;
+  --cpr-background-dialog-hr-gradient-start: #394867;
+  --cpr-background-dialog-selected: #414a4c;
+  --cpr-background-editor-button-active: #3e4242;
+  --cpr-background-editor-button-hover: #3e4242;
+  --cpr-background-editor-button-selected: var(--cpr-color-dark-grey);
+  --cpr-background-editor-button: #656a6a;
+  --cpr-background-editor-header: var(--cpr-dark-header);
+  --cpr-background-foundry-hover: var(--cpr-dark-main);
+  --cpr-background-foundry-input: #454b50;
+  --cpr-background-header: var(--cpr-dark-header);
+  --cpr-background-journal-blockquote: #3f4444;
+  --cpr-background-pill: var(--cpr-dark-header);
+  --cpr-background-row-even: #3b444b;
+  --cpr-background-row-odd: var(--cpr-dark-background);
+  --cpr-background-tab-active: var(--cpr-dark-main);
+  --cpr-background-tab-inactive: #0e1111;
+  --cpr-background-tab-underlay: #495057;
+  --cpr-background-toggle-checked: #6b95dc;
+  --cpr-background-window: var(--cpr-dark-background);
+  --cpr-dark-background: #232b2b;
+  --cpr-dark-bluish-grey: #394867;
+  --cpr-dark-header: #121212;
+  --cpr-dark-main: #52606d;
+  --cpr-dark-red: #c62828;
+  --cpr-dark-text-main: #eaeaea;
+
+  /* Text Colors */
+  --cpr-text-chat-failure: var(--cpr-dark-red);
+  --cpr-text-chat-normal: var(--cpr-dark-text-main);
+  --cpr-text-content-link-icon: #ddd;
+  --cpr-text-dir-list: var(--cpr-dark-text-main);
+  --cpr-text-editor-button: var(--cpr-color-black);
+  --cpr-text-editor-header: var(--cpr-dark-text-main);
+  --cpr-text-foundry-hint: #c0c0c0;
+  --cpr-text-foundry-hover: #bcccdc;
+  --cpr-text-foundry-input: var(--cpr-dark-text-main);
+  --cpr-text-header-arrow: var(--cpr-dark-main);
+  --cpr-text-header-line-box: #c0c0c5;
+  --cpr-text-header-line: var(--cpr-dark-main);
+  --cpr-text-header: var(--cpr-dark-text-main);
+  --cpr-text-hint: #c0c0c0;
+  --cpr-text-icon-dimmed: #66666e;
+  --cpr-text-icon-highlight: var(--cpr-dark-red);
+  --cpr-text-icon-normal: #c0c0c5;
+  --cpr-text-mook-normal: var(--cpr-dark-text-main);
+  --cpr-text-normal: var(--cpr-dark-text-main);
+  --cpr-text-pill: var(--cpr-dark-text-main);
+  --cpr-text-tab-normal: var(--cpr-dark-text-main);
+  --cpr-text-window: var(--cpr-dark-text-main);
+
+  /* Override some foundry defaults to better fit the theme */
+  --color-border-light-1: #666;
+  --color-border-light-primary: #666;
+  --color-shadow-primary: #bcccdc;
+
+  /* Icon Colors */
+  --cpr-icon-actor-image-overlay-border: #3b444b;
+  --cpr-icon-actor-image-overlay: var(--cpr-color-white);
+}
