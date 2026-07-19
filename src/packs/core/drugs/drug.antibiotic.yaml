@@ -1,0 +1,38 @@
+_id: ags0aoY9ViaGvTIb
+_key: "!items!ags0aoY9ViaGvTIb"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/drugs/antibiotics.svg
+name: Antibiotic
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  consumed: None
+  description:
+    value: |
+      <p>
+        If a target has started the natural healing process injecting them with
+        Antibiotic will cause them to heal an additional 2 Hit Points per day for a
+        week. This effect does not stack.
+      </p>
+  equipped: owned
+  favorite: false
+  price:
+    market: 0
+  revealed: true
+  sources:
+    - book: Core
+      page: 150
+  usage: toggled
+type: drug

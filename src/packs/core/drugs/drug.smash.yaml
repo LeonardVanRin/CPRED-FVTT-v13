@@ -1,0 +1,229 @@
+_id: PRLDaeBVeMuBBIeO
+_key: "!items!PRLDaeBVeMuBBIeO"
+effects:
+  - _id: v688v2AQZUpGXV7t
+    _key: "!items.effects!PRLDaeBVeMuBBIeO.v688v2AQZUpGXV7t"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    changes:
+      - key: bonuses.acting
+        mode: 2
+        priority: null
+        value: "2"
+      - key: bonuses.contortionist
+        mode: 2
+        priority: null
+        value: "2"
+      - key: bonuses.conversation
+        mode: 2
+        priority: null
+        value: "2"
+      - key: bonuses.dance
+        mode: 2
+        priority: null
+        value: "2"
+      - key: bonuses.humanPerception
+        mode: 2
+        priority: null
+        value: "2"
+      - key: bonuses.persuasion
+        mode: 2
+        priority: null
+        value: "2"
+    description: ""
+    disabled: true
+    duration:
+      combat: null
+      rounds: null
+      seconds: null
+      startRound: null
+      startTime: null
+      startTurn: null
+      turns: null
+    flags:
+      cyberpunk-red-core:
+        changes:
+          cats:
+            "0": skill
+            "1": skill
+            "2": skill
+            "3": skill
+            "4": skill
+            "5": skill
+          situational:
+            "0":
+              isSituational: false
+              onByDefault: false
+            "1":
+              isSituational: false
+              onByDefault: false
+            "2":
+              isSituational: false
+              onByDefault: false
+            "3":
+              isSituational: false
+              onByDefault: false
+            "4":
+              isSituational: false
+              onByDefault: false
+            "5":
+              isSituational: false
+              onByDefault: false
+    img: systems/cyberpunk-red-core/icons/compendium/status/smash.svg
+    name: Smash Primary
+    origin: null
+    sort: 0
+    statuses: []
+    system: {}
+    tint: "#ffffff"
+    transfer: true
+    type: base
+  - _id: R7hdY2qZux5j9oVJ
+    _key: "!items.effects!PRLDaeBVeMuBBIeO.R7hdY2qZux5j9oVJ"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    changes:
+      - key: bonuses.acting
+        mode: 2
+        priority: null
+        value: "-2"
+      - key: bonuses.contortionist
+        mode: 2
+        priority: null
+        value: "-2"
+      - key: bonuses.conversation
+        mode: 2
+        priority: null
+        value: "-2"
+      - key: bonuses.dance
+        mode: 2
+        priority: null
+        value: "-2"
+      - key: bonuses.humanPerception
+        mode: 2
+        priority: null
+        value: "-2"
+      - key: bonuses.persuasion
+        mode: 2
+        priority: null
+        value: "-2"
+    description: ""
+    disabled: true
+    duration:
+      combat: null
+      rounds: null
+      seconds: null
+      startRound: null
+      startTime: null
+      startTurn: null
+      turns: null
+    flags:
+      cyberpunk-red-core:
+        changes:
+          cats:
+            "0": skill
+            "1": skill
+            "2": skill
+            "3": skill
+            "4": skill
+            "5": skill
+          situational:
+            "0":
+              isSituational: false
+              onByDefault: false
+            "1":
+              isSituational: false
+              onByDefault: false
+            "2":
+              isSituational: false
+              onByDefault: false
+            "3":
+              isSituational: false
+              onByDefault: false
+            "4":
+              isSituational: false
+              onByDefault: false
+            "5":
+              isSituational: false
+              onByDefault: false
+    img: systems/cyberpunk-red-core/icons/compendium/status/smash_addiciton.svg
+    name: Smash Addiction
+    origin: null
+    sort: 0
+    statuses: []
+    system: {}
+    tint: "#ffffff"
+    transfer: true
+    type: base
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/drugs/smash.svg
+name: Smash
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  consumed: Smash Primary
+  description:
+    value: |
+      <p><strong>Primary Effect</strong></p>
+      <p>Dose lasts 4 hours.</p>
+      <p>
+        The user feels happy and satisfied, receiving a temporary modifier of +2 to
+        the following skills
+      </p>
+      <ul>
+        <li>Dance</li>
+        <li>Contortionist</li>
+        <li>Conversation</li>
+        <li>Human Perception</li>
+        <li>Persuasion</li>
+        <li>Acting</li>
+      </ul>
+      <p><strong>Secondary Effect (DV15)</strong></p>
+      <p>User is addicted to Smash.</p>
+      <p>While addicted, user suffers a -2 modifier to the following skills</p>
+      <ul>
+        <li>Dance</li>
+        <li>Contortionist</li>
+        <li>Conversation</li>
+        <li>Human Perception</li>
+        <li>Persuasion</li>
+        <li>Acting</li>
+      </ul>
+      <p>GM will tell your when you crave more Smash. Roleplay accordingly.</p>
+  equipped: owned
+  favorite: false
+  price:
+    market: 10
+  revealed: true
+  sources:
+    - book: Core
+      page: 357
+  usage: snorted
+type: drug
