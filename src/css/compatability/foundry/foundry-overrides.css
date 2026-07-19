@@ -1,0 +1,458 @@
+/*
+ * These rules used to apply globally and, because our stylesheet outranked
+ * Foundry's, they re-themed core and other modules' windows too. Everything
+ * here is now scoped to CPR's own windows (sheets, dialogs, apps) and — for the
+ * deliberate journal exception — journal page content. Our stylesheet sits on
+ * the @system cascade layer (see src/system.json).
+ */
+
+/****************
+ * CPR windows  *
+ ****************/
+
+.actor-sheet,
+.blackice-sheet,
+.container-sheet,
+.demon-sheet,
+.dialog-sheet,
+.item-sheet,
+.mook-sheet {
+  font-family: var(--cpr-font-primary);
+  color: var(--cpr-text-normal);
+  background: var(--cpr-background-window);
+
+  button {
+    color: var(--cpr-text-foundry-input);
+    background-color: var(--cpr-background-foundry-input);
+  }
+
+  select,
+  option,
+  optgroup {
+    color: var(--cpr-text-normal);
+    background: var(--cpr-background-window);
+  }
+
+  .entry-name,
+  .directory-list {
+    color: var(--cpr-text-dir-list);
+  }
+
+  /* Undo Foundry Base Style settings for elements */
+  img {
+    border: none;
+  }
+
+  ol li,
+  ul li {
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+
+  a:hover {
+    text-shadow: 0 0 0.5rem var(--cpr-background-foundry-hover);
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="date"],
+  input[type="time"] {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    min-width: unset;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    line-height: inherit;
+    user-select: text;
+    height: 100%;
+    background: none;
+
+    /*
+     * Our sheets are always Foundry "theme-light", so Foundry colours these
+     * inputs with its light-theme (dark) text colour. Drive them from our own
+     * theme variable instead, so input values (name, role, HP/Humanity, stats,
+     * skill levels, …) follow the CPR theme — light in dark mode, dark in light.
+     */
+    color: var(--cpr-text-normal);
+  }
+
+  input::placeholder {
+    color: var(--cpr-text-normal);
+    opacity: 0.6;
+  }
+
+  /* Inline code in our own windows (Foundry styles its own code elsewhere). */
+  code {
+    background-color: var(--cpr-background-code);
+    padding: 0.125rem;
+  }
+}
+
+/* Inline code in journal page content (journal exception). */
+.journal-entry-content code,
+.journal-page-content code,
+.journal-sheet-container code {
+  background-color: var(--cpr-background-code);
+  padding: 0.125rem;
+}
+
+/****************************
+ * Application V2 Overrides *
+ ****************************/
+
+/*
+ * These target our own ApplicationV2 windows only (the migration dialog and the
+ * compendia settings app). CPR sheets and dialogs are ApplicationV1
+ * (.window-app) and style their own links/inputs, so they must NOT be included
+ * here — doing so turns every rollable <a> header (stats, box labels, tabs) red.
+ */
+html[data-cpr-theme="default"] :is(.cpr-migration-dialog, #compendia-config) a {
+  color: var(--cpr-color-red);
+}
+
+[data-cpr-theme="dark"] :is(.cpr-migration-dialog, #compendia-config) {
+  input[type="checkbox"]::before {
+    color: var(--cpr-color-light-grey);
+  }
+
+  input[type="checkbox"]:checked::before {
+    color: var(--cpr-color-faded-black);
+  }
+}
+
+/*
+ * Prosemirror Overrides
+ *
+ * .prosemirror gets a lot of styling from the Journals section below as well
+ * the rules here are specific to the editor that don't have styles in the
+ * Journal section itself. Scoped to our own windows and journal page content so
+ * Foundry's and other modules' editors are left alone.
+ */
+
+:is(
+    .actor-sheet,
+    .blackice-sheet,
+    .container-sheet,
+    .demon-sheet,
+    .dialog-sheet,
+    .item-sheet,
+    .mook-sheet,
+    .cpr-migration-dialog,
+    .releasenotes,
+    .journal-entry-content,
+    .journal-page-content,
+    .journal-sheet-container
+  )
+  :is(.prosemirror, .prosemirror.menu-dialog) {
+  form {
+    color: var(--cpr-text-normal);
+    background: var(--cpr-background-box);
+  }
+
+  menu {
+    button,
+    ul,
+    .pm-dropdown {
+      color: var(--cpr-text-foundry-input) !important;
+      background: var(--cpr-background-editor-button) !important;
+
+      /* Set the color of the icons in the dropdowns */
+      i,
+      i:hover {
+        color: var(--cpr-text-foundry-input) !important;
+      }
+
+      li {
+        &:hover {
+          color: var(--cpr-text-foundry-input) !important;
+          background: var(--cpr-background-editor-button-hover) !important;
+        }
+      }
+    }
+
+    button {
+      &:active {
+        color: var(--cpr-text-foundry-input) !important;
+        background: var(--cpr-background-editor-button-active) !important;
+      }
+
+      &:hover {
+        color: var(--cpr-text-foundry-input) !important;
+        background: var(--cpr-background-editor-button-hover) !important;
+      }
+    }
+  }
+
+  .editor-container {
+    height: 100%;
+  }
+
+  .editor-content {
+    height: 100%;
+    padding: 0;
+  }
+}
+
+:is(
+    .actor-sheet,
+    .blackice-sheet,
+    .container-sheet,
+    .demon-sheet,
+    .dialog-sheet,
+    .item-sheet,
+    .mook-sheet,
+    .cpr-migration-dialog,
+    .releasenotes,
+    .journal-entry-content,
+    .journal-page-content,
+    .journal-sheet-container
+  )
+  .editor.prosemirror {
+  min-height: 10rem;
+}
+
+/*
+ * Journals (journal page content is a deliberate exception we keep theming).
+ */
+
+/* This is not in the general journal divs as you would expect */
+.journal-header {
+  input {
+    color: var(--cpr-text-chat-normal) !important;
+    font-family: var(--cpr-font-journal-header);
+    font-weight: 800;
+    font-variant: small-caps;
+  }
+}
+
+/*
+ * TextEditor/Prosemirror Overides — journal page content plus rich-text inside
+ * our own windows.
+ */
+.releasenotes,
+.journal-entry-content,
+.journal-page-content,
+.journal-sheet-container,
+:is(
+    .actor-sheet,
+    .blackice-sheet,
+    .container-sheet,
+    .demon-sheet,
+    .dialog-sheet,
+    .item-sheet,
+    .mook-sheet,
+    .cpr-migration-dialog
+  )
+  :is(.prosemirror, .editor-content) {
+  font-family: var(--cpr-font-primary);
+  color: var(--cpr-text-normal) !important;
+  background: var(--cpr-background-window);
+
+  /* Normally we wouldn't use <strong> but it's how the WYSIWYG editor does bold, style this to be more semi-bold. */
+  strong {
+    font-weight: 550;
+  }
+
+  hr {
+    border-bottom: 0.125rem solid var(--cpr-background-dialog-border);
+  }
+
+  /* We don't want no stinkin' borders */
+  img {
+    border: none;
+  }
+
+  /*
+  This only supports tables with alternating color rows (90% of tables in the
+  the book), will need some more rules for alternating color columns.
+  This mess is because when using the markdown editor (vs. TinyMCE /
+  Prosemirror) it add a 'thead' element so we need to account for that when
+  coloring the rows. The only difference is that tables with a 'thead' start
+  with pink rows rather than white rows. This shouldn't really matter as
+  they should be consistent across all uses of tables with 'thead'.
+  */
+
+  /* First row of every table */
+  table tr:first-of-type {
+    color: var(--cpr-text-journal-table-header);
+    background: var(--cpr-background-dialog-border);
+    font-weight: 550;
+    text-align: left;
+    text-shadow: none;
+  }
+
+  table thead + tbody tr:first-of-type {
+    background-color: var(--cpr-background-progress);
+  }
+
+  table tbody tr:nth-of-type(even):not(:first-of-type),
+  table thead + tbody tr:nth-of-type(2n) {
+    color: var(--cpr-text-normal);
+    background: var(--cpr-background-row-even);
+  }
+
+  table tbody tr:nth-of-type(odd):not(:first-of-type),
+  table thead + tbody tr:nth-of-type(2n + 1) {
+    color: var(--cpr-text-normal);
+    background: var(--cpr-background-row-odd);
+    font-weight: 400;
+  }
+
+  table {
+    tr,
+    td,
+    th {
+      border: 0.313rem solid var(--cpr-background-dialog-border) !important;
+      padding: 0.313rem !important;
+    }
+  }
+
+  .journal-sidebar {
+    .pages-list {
+      .directory-item.active:first-of-type,
+      .directory-item.active + :not(.active) {
+        border-top: 0.063rem solid var(--cpr-background-dialog-border);
+      }
+    }
+  }
+
+  /* Catchall for headers */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .journal-header,
+  .journal-header input {
+    color: var(--cpr-text-chat-normal) !important;
+    font-family: var(--cpr-font-journal-header);
+    font-weight: 800;
+    font-variant: small-caps;
+  }
+
+  h1 {
+    position: relative;
+    border-bottom: 1.57rem solid var(--cpr-text-header-line);
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &::first-letter {
+      float: left;
+      font-size: 4.688rem;
+      line-height: 3.75rem;
+      padding-top: 0.625rem;
+      text-transform: capitalize;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 1.57rem;
+      height: 1.57rem;
+      position: absolute;
+      bottom: -1.57rem;
+      right: -0.063rem;
+      background-color: var(--cpr-text-header-line-box);
+      margin-left: 0.313rem;
+    }
+  }
+
+  h2 {
+    position: relative;
+    border-bottom: 0.313rem solid var(--cpr-text-header-line);
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 1.57rem;
+      height: 1.57rem;
+      position: absolute;
+      bottom: -0.87rem;
+      right: -0.063rem;
+      background-color: var(--cpr-text-header-line);
+      margin-left: 0.313rem;
+    }
+  }
+
+  h3 {
+    border-bottom: none;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &::before {
+      content: "▶ ";
+      color: var(--cpr-text-header-arrow);
+    }
+  }
+
+  h4 {
+    text-align: center;
+    border-bottom: none;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &::before {
+      content: "▶ ";
+      color: var(--cpr-text-header-arrow);
+    }
+
+    &::after {
+      content: " ◀";
+      color: var(--cpr-text-header-arrow);
+    }
+  }
+
+  h5 {
+    text-align: center;
+    border-bottom: none;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h6 {
+    border-bottom: none;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  blockquote {
+    padding: 0.313rem 0.313rem 0.313rem 1.25rem;
+    background: var(--cpr-background-journal-blockquote);
+  }
+
+  .secret {
+    border: 0.125rem dashed var(--cpr-background-journal-secret-hidden-border);
+    background-color: var(--cpr-background-journal-secret-hidden-background);
+  }
+
+  section.secret.revealed {
+    border: 0;
+    background: var(--cpr-background-box);
+  }
+
+  /* This isn't supported by the GUI editors but can be done when editing the HTML, but it allows us to create nice info boxes in journals as needed. */
+  section.info::before {
+    content: "ℹ️";
+    position: absolute;
+    margin: 0.5rem 0 0 -1.45rem;
+  }
+
+  section.info {
+    padding: 0.313rem 0.313rem 0.313rem 2rem;
+    background: var(--cpr-background-journal-info);
+    border-radius: 0.313rem;
+    margin: 0.313rem 0;
+  }
+}
