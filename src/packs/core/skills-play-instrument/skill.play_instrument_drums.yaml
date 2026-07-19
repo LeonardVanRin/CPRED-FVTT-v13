@@ -1,0 +1,29 @@
+_id: CwO0DPCH4GVtXxy3
+_key: "!items!CwO0DPCH4GVtXxy3"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/default/Default_Skill.svg
+name: Play Instrument (Drums)
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: false
+  category: performanceSkills
+  core: false
+  description:
+    value: ""
+  difficulty: typical
+  favorite: false
+  level: 0
+  skillType: generic
+  sources:
+    - book: Core
+      page: 83
+  stat: tech
+type: skill
