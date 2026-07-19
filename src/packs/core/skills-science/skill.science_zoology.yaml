@@ -1,0 +1,29 @@
+_id: JDfPCCM1T7LZ4SMw
+_key: "!items!JDfPCCM1T7LZ4SMw"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/default/Default_Skill.svg
+name: Science (Zoology)
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: false
+  category: educationSkills
+  core: false
+  description:
+    value: ""
+  difficulty: typical
+  favorite: false
+  level: 0
+  skillType: science
+  sources:
+    - book: Core
+      page: 83
+  stat: int
+type: skill
