@@ -1,0 +1,82 @@
+_id: RAZcouFe0FS1VN1o
+_key: "!items!RAZcouFe0FS1VN1o"
+effects:
+  - _id: K5VZo8azU8QYk46R
+    _key: "!items.effects!RAZcouFe0FS1VN1o.K5VZo8azU8QYk46R"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    changes:
+      - key: system.stats.move.value
+        mode: 2
+        priority: null
+        value: "-2"
+    description: ""
+    disabled: false
+    duration:
+      combat: null
+      rounds: null
+      seconds: null
+      startRound: null
+      startTime: null
+      startTurn: null
+      turns: null
+    flags:
+      cyberpunk-red-core:
+        changes:
+          cats:
+            "0": stat
+          situational:
+            "0":
+              isSituational: false
+              onByDefault: false
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/collapsed_lung.svg
+    name: Collapsed Lung
+    origin: null
+    sort: 0
+    statuses: []
+    system: {}
+    tint: "#ffffff"
+    transfer: true
+    type: base
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: >-
+  systems/cyberpunk-red-core/icons/compendium/critical_injuries/collapsed_lung.svg
+name: Collapsed Lung
+ownership:
+  default: 0
+sort: 0
+system:
+  deathSaveIncrease: true
+  description:
+    value: |
+      <p>-2 MOVE (minimum MOVE of 1).</p>
+  favorite: false
+  location: body
+  quickFix:
+    dvFirstAid: 0
+    dvParamedic: 15
+    type: paramedic
+  revealed: true
+  sources:
+    - book: Core
+      page: 187
+  treatment:
+    dvParamedic: 0
+    dvSurgery: 15
+    type: surgery
+  usage: toggled
+type: criticalInjury
