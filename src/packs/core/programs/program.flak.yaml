@@ -1,0 +1,48 @@
+_id: PDYabXG1H9XbpAWS
+_key: "!items!PDYabXG1H9XbpAWS"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/programs/flak.svg
+name: Flak
+ownership:
+  default: 0
+sort: 0
+system:
+  atk: 0
+  blackIceType: antipersonnel
+  class: defender
+  damage:
+    blackIce: 1d6
+    standard: 1d6
+  def: 0
+  description:
+    value: |
+      <p>
+        Non-Black ICE attacks against you are reduced to 0 while Rezzed. Only 1 copy
+        may be Rezzed at a time. Each copy has 1 use per Netrun.
+      </p>
+  favorite: false
+  installLocation: mall
+  interface: 0
+  isRezzed: false
+  per: 0
+  price:
+    market: 50
+  prototypeActor: ""
+  revealed: true
+  rez:
+    max: 7
+    transactions: []
+    value: 7
+  size: 1
+  sources:
+    - book: Core
+      page: 369
+  spd: 0
+  usage: toggled
+type: program

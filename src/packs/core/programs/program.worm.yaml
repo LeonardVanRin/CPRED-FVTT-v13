@@ -1,0 +1,90 @@
+_id: SmwW6B3Qi6svIClB
+_key: "!items!SmwW6B3Qi6svIClB"
+effects:
+  - _id: klHyNd5SaW5gjLO7
+    _key: "!items.effects!SmwW6B3Qi6svIClB.klHyNd5SaW5gjLO7"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    changes:
+      - key: bonuses.backdoor
+        mode: 2
+        priority: null
+        value: "2"
+    description: ""
+    disabled: false
+    duration:
+      combat: null
+      rounds: null
+      seconds: null
+      startRound: null
+      startTime: null
+      startTurn: null
+      turns: null
+    flags:
+      cyberpunk-red-core:
+        changes:
+          cats:
+            "0": netrun
+          situational:
+            "0":
+              isSituational: false
+              onByDefault: false
+    img: systems/cyberpunk-red-core/icons/compendium/programs/worm.svg
+    name: Worm
+    origin: null
+    sort: 0
+    statuses: []
+    system: {}
+    tint: "#ffffff"
+    transfer: true
+    type: base
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/programs/worm.svg
+name: Worm
+ownership:
+  default: 0
+sort: 0
+system:
+  atk: 0
+  blackIceType: antipersonnel
+  class: booster
+  damage:
+    blackIce: 1d6
+    standard: 1d6
+  def: 0
+  description:
+    value: |
+      <p>+2 to Backdoor Checks while Rezzed.</p>
+  favorite: false
+  installLocation: mall
+  interface: 0
+  isRezzed: false
+  per: 0
+  price:
+    market: 50
+  prototypeActor: ""
+  revealed: true
+  rez:
+    max: 7
+    transactions: []
+    value: 7
+  size: 1
+  sources:
+    - book: Core
+      page: 368
+  spd: 0
+  usage: rezzed
+type: program

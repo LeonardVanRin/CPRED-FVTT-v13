@@ -1,0 +1,45 @@
+_id: iHUrp2OkBZb3Ugf8
+_key: "!items!iHUrp2OkBZb3Ugf8"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/programs/sword.svg
+name: Sword
+ownership:
+  default: 0
+sort: 0
+system:
+  atk: 1
+  blackIceType: antipersonnel
+  class: antiprogramattacker
+  damage:
+    blackIce: 3d6
+    standard: 2d6
+  def: 0
+  description:
+    value: |
+      <p>Deals 3d6 REZ to Black ICE or 2d6 Rez damage to non-Black ICE.</p>
+  favorite: false
+  installLocation: mall
+  interface: 0
+  isRezzed: false
+  per: 0
+  price:
+    market: 50
+  prototypeActor: ""
+  revealed: true
+  rez:
+    max: 0
+    transactions: []
+    value: 0
+  size: 1
+  sources:
+    - book: Core
+      page: 369
+  spd: 0
+  usage: toggled
+type: program
