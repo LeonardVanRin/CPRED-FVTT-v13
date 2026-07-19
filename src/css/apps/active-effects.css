@@ -1,0 +1,30 @@
+.cpr-effect-changes {
+  .changes-list {
+    display: block;
+  }
+
+  .change-header,
+  .changes-list > li {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .changes-list > li:nth-child(odd),
+  .changes-list > li:nth-child(even) {
+    background-color: transparent;
+  }
+
+  .effect-controls {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+.summary-effect-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.summary-effect-value {
+  align-self: center;
+}
