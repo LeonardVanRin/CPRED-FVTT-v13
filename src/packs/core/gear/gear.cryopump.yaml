@@ -1,0 +1,45 @@
+_id: KF1c9BEkThuDVZb4
+_key: "!items!KF1c9BEkThuDVZb4"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/gear/cryopump.svg
+name: Cryopump
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>
+        Briefcase-sized tool used for hooking up a wounded person. Places them in
+        stasis.
+      </p>
+  equipped: owned
+  favorite: false
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: true
+  price:
+    market: 5000
+  providesHardening: false
+  revealed: true
+  sources:
+    - book: Core
+      page: 353
+  usage: toggled
+type: gear

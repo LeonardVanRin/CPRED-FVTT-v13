@@ -1,0 +1,42 @@
+_id: uYXTKNbOO4ofu53c
+_key: "!items!uYXTKNbOO4ofu53c"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/gear/handcuffs.svg
+name: Handcuffs
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>BODY>10 can break.</p>
+  equipped: owned
+  favorite: false
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: false
+  price:
+    market: 50
+  providesHardening: false
+  revealed: true
+  sources:
+    - book: Core
+      page: 353
+  usage: toggled
+type: gear

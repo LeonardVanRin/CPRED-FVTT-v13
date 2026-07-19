@@ -1,0 +1,43 @@
+_id: sMAZKb9ErPoQJ1vV
+_key: "!items!sMAZKb9ErPoQJ1vV"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: >-
+  systems/cyberpunk-red-core/icons/compendium/gear/radio_scanner_music_player.svg
+name: Radio Scanner/Music Player
+ownership:
+  default: 0
+sort: 0
+system:
+  amount: 1
+  brand: ""
+  concealable:
+    concealable: false
+    isConcealed: false
+  description:
+    value: |
+      <p>Receive radio transmissions. Range: 1 mile.</p>
+  equipped: owned
+  favorite: false
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - itemUpgrade
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: true
+  price:
+    market: 50
+  providesHardening: false
+  revealed: true
+  sources:
+    - book: Core
+      page: 354
+  usage: toggled
+type: gear
