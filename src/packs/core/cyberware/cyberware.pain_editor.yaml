@@ -1,0 +1,119 @@
+_id: umX2i9wlVcBG1lgv
+_key: "!items!umX2i9wlVcBG1lgv"
+effects:
+  - _id: TeYMucOf1sfsns1r
+    _key: "!items.effects!umX2i9wlVcBG1lgv.TeYMucOf1sfsns1r"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    changes:
+      - key: bonuses.hasPainSuppression
+        mode: 5
+        priority: null
+        value: "1"
+    description: ""
+    disabled: false
+    duration:
+      combat: null
+      rounds: null
+      seconds: null
+      startRound: null
+      startTime: null
+      startTurn: null
+      turns: null
+    flags:
+      cyberpunk-red-core:
+        changes:
+          cats:
+            "0": misc
+          situational:
+            "0":
+              isSituational: false
+              onByDefault: false
+    img: systems/cyberpunk-red-core/icons/compendium/cyberware/pain_editor.svg
+    name: Pain Editor
+    origin: null
+    sort: 0
+    statuses: []
+    system: {}
+    tint: "#ffffff"
+    transfer: true
+    type: base
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 42
+      previous: "41"
+folder: null
+img: systems/cyberpunk-red-core/icons/compendium/cyberware/pain_editor.svg
+name: Pain Editor
+ownership:
+  default: 0
+sort: 0
+system:
+  ammoVariety: []
+  attackmod: 0
+  brand: ""
+  canIgnoreArmor: true
+  concealable:
+    concealable: false
+    isConcealed: false
+  core: false
+  critFailEffect: jammed
+  damage: 1d6
+  damageCrit:
+    bonus: 5
+    count: 2
+    threshold: 0
+  description:
+    value: |
+      <p>Chipware. Removes Seriously Wounded penalties.</p>
+  dvTable: ""
+  favorite: false
+  fireModes:
+    autoFire: 0
+    suppressiveFire: false
+  humanityLoss:
+    roll: 4d6
+    static: 14
+  ignoreArmorPercent: 50
+  ignoreBelowSP: 0
+  installLocation: notApplicable
+  installedItems:
+    allowed: false
+    allowedTypes:
+      - cyberware
+    list: []
+    slots: 0
+    usedSlots: 0
+  isElectronic: true
+  isFoundational: false
+  isRanged: false
+  isWeapon: false
+  magazine:
+    ammoData: null
+    max: 0
+    value: 0
+  price:
+    market: 1000
+  providesHardening: false
+  revealed: true
+  rof: 1
+  size: 1
+  sources:
+    - book: Core
+      page: 360
+  type: neuralWare
+  unarmedAutomaticCalculation: true
+  usage: installed
+  usesType: magazine
+  weaponSkill: Archery
+  weaponType: assaultRifle
+type: cyberware

@@ -1,0 +1,82 @@
+_id: TievDHlAoROyoynx
+_key: "!items!TievDHlAoROyoynx"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 42
+      previous: "41"
+folder: null
+img: >-
+  systems/cyberpunk-red-core/icons/compendium/cyberware/popup_grenade_launcher.svg
+name: Popup Grenade Launcher
+ownership:
+  default: 0
+sort: 0
+system:
+  ammoVariety:
+    - grenade
+  attackmod: 0
+  brand: ""
+  canIgnoreArmor: false
+  concealable:
+    concealable: true
+    isConcealed: false
+  core: false
+  critFailEffect: jammed
+  damage: 6d6
+  damageCrit:
+    bonus: 5
+    count: 2
+    threshold: 0
+  description:
+    value: |
+      <p>
+        A concealable one-shot Grenade Launcher. Can't hold anything with this hand
+        while activated. Incompatible with all upgrades except
+        @UUID[Compendium.cyberpunk-red-core.core_upgrades.Item.BC8S1sdK0QGdyHNC]{Smartgun
+        Link}.
+      </p>
+  dvTable: DV Grenade Launcher
+  favorite: false
+  fireModes:
+    autoFire: 0
+    suppressiveFire: false
+  humanityLoss:
+    roll: 2d6
+    static: 7
+  ignoreArmorPercent: 0
+  ignoreBelowSP: 0
+  installLocation: clinic
+  installedItems:
+    allowed: true
+    allowedTypes:
+      - cyberware
+      - ammo
+    list: []
+    slots: 2
+    usedSlots: 0
+  isElectronic: true
+  isFoundational: false
+  isRanged: true
+  isWeapon: true
+  magazine:
+    ammoData: null
+    max: 1
+    value: 0
+  price:
+    market: 500
+  providesHardening: false
+  revealed: true
+  rof: 1
+  size: 2
+  sources:
+    - book: Core
+      page: 365
+  type: cyberArm
+  unarmedAutomaticCalculation: true
+  usage: toggled
+  usesType: magazine
+  weaponSkill: Heavy Weapons
+  weaponType: grenadeLauncher
+type: cyberware
