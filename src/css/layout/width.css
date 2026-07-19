@@ -1,0 +1,90 @@
+.width- {
+  display: flex;
+  justify-content: space-around;
+  flex: 1 0 auto;
+
+  &sixteenth {
+    width: 6.25%;
+  }
+
+  &eighth {
+    width: 12.5%;
+  }
+
+  &sixth {
+    width: calc(100% / 6);
+  }
+
+  &quarter {
+    width: 25%;
+  }
+
+  &third {
+    width: calc(100% / 3);
+  }
+
+  &half {
+    width: 50%;
+  }
+
+  &full {
+    width: 100%;
+  }
+
+  &grow {
+    flex-grow: 1;
+  }
+
+  &no-grow {
+    flex-grow: 0;
+  }
+
+  &shrink {
+    flex-shrink: 1;
+  }
+
+  &no-shrink {
+    flex-shrink: 0;
+  }
+
+  &auto-basis {
+    flex-basis: auto;
+  }
+
+  &long {
+    flex-basis: 5%;
+  }
+
+  &longer {
+    flex-basis: 70%;
+  }
+
+  &fit {
+    width: fit-content;
+    padding: 0 0.125rem;
+  }
+
+  &max-half {
+    max-width: 50%;
+  }
+
+  &max-quarter {
+    max-width: 25%;
+  }
+
+  &max-eighth {
+    max-width: 12.5%;
+  }
+
+  &max-three-quarters {
+    max-width: 75%;
+  }
+
+  &max-third {
+    max-width: calc(100% / 3);
+  }
+
+  &max-two-thirds {
+    max-width: calc((100% / 3) * 2);
+  }
+}

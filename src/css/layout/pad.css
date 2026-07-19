@@ -1,0 +1,17 @@
+.pad- {
+  &thinner {
+    padding: 0.125rem;
+  }
+
+  &thin {
+    padding: 0.313rem;
+  }
+
+  &thick {
+    padding: 0.5rem;
+  }
+
+  &thicker {
+    padding: 0.625rem;
+  }
+}
