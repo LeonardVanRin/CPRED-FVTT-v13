@@ -1,0 +1,290 @@
+_id: n7IlIvMfg7yW1OoE
+_key: "!tables!n7IlIvMfg7yW1OoE"
+description: ""
+displayRoll: true
+flags: {}
+folder: null
+formula: 2d6
+img: >-
+  systems/cyberpunk-red-core/icons/compendium/critical_injuries/body_critical_injury.svg
+name: Critical Injuries (Body)
+ownership:
+  default: 0
+replacement: true
+results:
+  - _id: ZieosouBln5Il2tk
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.ZieosouBln5Il2tk"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.9N6yHeVwiGg2MkeL
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/dismembered_arm.svg
+    name: Dismembered Arm
+    range:
+      - 2
+      - 2
+    type: document
+    weight: 1
+  - _id: odZ5Yyt3WOrNSKzV
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.odZ5Yyt3WOrNSKzV"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.xmlFB3X2q2NAklfn
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/dismembered_hand.svg
+    name: Dismembered Hand
+    range:
+      - 3
+      - 3
+    type: document
+    weight: 1
+  - _id: TGVSxOE3pxFV34Sm
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.TGVSxOE3pxFV34Sm"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.RAZcouFe0FS1VN1o
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/collapsed_lung.svg
+    name: Collapsed Lung
+    range:
+      - 4
+      - 4
+    type: document
+    weight: 1
+  - _id: unBMWAiXQKK6GY0M
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.unBMWAiXQKK6GY0M"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.MQpiPgEtPaIe6MJ6
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/broken_ribs.svg
+    name: Broken Ribs
+    range:
+      - 5
+      - 5
+    type: document
+    weight: 1
+  - _id: O1dQcS4a7PmVCp5J
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.O1dQcS4a7PmVCp5J"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.Y65igO9rtakP4qSs
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/broken_arm.svg
+    name: Broken Arm
+    range:
+      - 6
+      - 6
+    type: document
+    weight: 1
+  - _id: RCLUsZLr404b5IcV
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.RCLUsZLr404b5IcV"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.xTQ2T50UGNY8DrHl
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/foreign_object_body.svg
+    name: Foreign Object
+    range:
+      - 7
+      - 7
+    type: document
+    weight: 1
+  - _id: QGtmPYrCvP88rKzC
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.QGtmPYrCvP88rKzC"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.yBy9rlhgZeaWGtHh
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/broken_leg.svg
+    name: Broken Leg
+    range:
+      - 8
+      - 8
+    type: document
+    weight: 1
+  - _id: dpYAJWeQ1uDXPo0S
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.dpYAJWeQ1uDXPo0S"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.Z3iVuSFtma3Bx7SX
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/torn_muscle.svg
+    name: Torn Muscle
+    range:
+      - 9
+      - 9
+    type: document
+    weight: 1
+  - _id: juZQlAH6geJgCHw4
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.juZQlAH6geJgCHw4"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.pQ2F7FsQvZJyZGXe
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/spinal_injury.svg
+    name: Spinal Injury
+    range:
+      - 10
+      - 10
+    type: document
+    weight: 1
+  - _id: YhW9mFW9i6vzKbBU
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.YhW9mFW9i6vzKbBU"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.IKKcCgHU1lBJ4wVd
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/crushed_fingers.svg
+    name: Crushed Fingers
+    range:
+      - 11
+      - 11
+    type: document
+    weight: 1
+  - _id: ysFKhaP2wS8HHg8A
+    _key: "!tables.results!n7IlIvMfg7yW1OoE.ysFKhaP2wS8HHg8A"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: ""
+    documentUuid: >-
+      Compendium.cyberpunk-red-core.core_critical-injuries-body.Item.vRhxMWgOHYROHeHm
+    drawn: false
+    flags: {}
+    img: >-
+      systems/cyberpunk-red-core/icons/compendium/critical_injuries/dismembered_leg.svg
+    name: Dismembered Leg
+    range:
+      - 12
+      - 12
+    type: document
+    weight: 1
+sort: 0
