@@ -1,0 +1,29 @@
+_id: Xbk6aAKKUQtXRunw
+_key: "!items!Xbk6aAKKUQtXRunw"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: icons/svg/item-bag.svg
+name: Autofire
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: false
+  category: rangedweaponSkills
+  core: true
+  description:
+    value: ""
+  difficulty: difficult
+  favorite: false
+  level: 0
+  skillType: generic
+  sources:
+    - book: Core
+      page: 138
+  stat: ref
+type: skill

@@ -1,0 +1,29 @@
+_id: zSBy9rWNSEVySygE
+_key: "!items!zSBy9rWNSEVySygE"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: icons/svg/item-bag.svg
+name: Dance
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: false
+  category: bodySkills
+  core: true
+  description:
+    value: ""
+  difficulty: typical
+  favorite: false
+  level: 0
+  skillType: generic
+  sources:
+    - book: Core
+      page: 132
+  stat: dex
+type: skill

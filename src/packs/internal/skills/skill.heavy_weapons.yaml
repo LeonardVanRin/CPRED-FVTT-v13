@@ -1,0 +1,29 @@
+_id: TNA0LGN1MAYoA60l
+_key: "!items!TNA0LGN1MAYoA60l"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: icons/svg/item-bag.svg
+name: Heavy Weapons
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: false
+  category: rangedweaponSkills
+  core: true
+  description:
+    value: ""
+  difficulty: difficult
+  favorite: false
+  level: 0
+  skillType: generic
+  sources:
+    - book: Core
+      page: 137
+  stat: ref
+type: skill

@@ -1,0 +1,29 @@
+_id: E6ZW9X4H8tjX294j
+_key: "!items!E6ZW9X4H8tjX294j"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: icons/svg/item-bag.svg
+name: Local Expert (Your Home)
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: true
+  category: educationSkills
+  core: false
+  description:
+    value: ""
+  difficulty: typical
+  favorite: false
+  level: 2
+  skillType: generic
+  sources:
+    - book: Core
+      page: 135
+  stat: int
+type: skill

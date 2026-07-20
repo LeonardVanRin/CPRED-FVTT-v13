@@ -1,0 +1,29 @@
+_id: 4nZAn6M44PYI8CU2
+_key: "!items!4nZAn6M44PYI8CU2"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: icons/svg/item-bag.svg
+name: Resist Torture/Drugs
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: false
+  category: bodySkills
+  core: true
+  description:
+    value: ""
+  difficulty: typical
+  favorite: false
+  level: 0
+  skillType: generic
+  sources:
+    - book: Core
+      page: 132
+  stat: will
+type: skill

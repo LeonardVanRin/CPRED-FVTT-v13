@@ -1,0 +1,29 @@
+_id: EkO3gpmabPfeGZeU
+_key: "!items!EkO3gpmabPfeGZeU"
+effects: []
+flags:
+  cyberpunk-red-core:
+    _migration:
+      current: 33
+      previous: "24"
+folder: null
+img: icons/svg/item-bag.svg
+name: Streetwise
+ownership:
+  default: 0
+sort: 0
+system:
+  basic: false
+  category: socialSkills
+  core: true
+  description:
+    value: ""
+  difficulty: typical
+  favorite: false
+  level: 0
+  skillType: generic
+  sources:
+    - book: Core
+      page: 139
+  stat: cool
+type: skill
