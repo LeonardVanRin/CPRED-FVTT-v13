@@ -1,0 +1,227 @@
+{
+  "type": "object",
+  "properties": {
+    "weaponType": {
+      "type": "string",
+      "enum": [
+        "assaultRifle",
+        "bow",
+        "grenadeLauncher",
+        "heavyMelee",
+        "heavyPistol",
+        "heavySmg",
+        "lightMelee",
+        "martialArts",
+        "medMelee",
+        "medPistol",
+        "rocketLauncher",
+        "shotgun",
+        "smg",
+        "sniperRifle",
+        "thrownWeapon",
+        "unarmed",
+        "vHeavyMelee",
+        "vHeavyPistol",
+        ""
+      ]
+    },
+    "weaponSkill": {
+      "type": "string",
+      "enum": [
+        "Accounting",
+        "Acting",
+        "Air Vehicle Tech",
+        "Animal Handling",
+        "Archery",
+        "Athletics",
+        "Autofire",
+        "Basic Tech",
+        "Brawling",
+        "Bribery",
+        "Bureaucracy",
+        "Business",
+        "Composition",
+        "Conceal/Reveal Object",
+        "Concentration",
+        "Contortionist",
+        "Conversation",
+        "Criminology",
+        "Cryptography",
+        "Cybertech",
+        "Dance",
+        "Deduction",
+        "Demolitions",
+        "Drive Land Vehicle",
+        "Education",
+        "Electronics/Security Tech",
+        "Endurance",
+        "Evasion",
+        "First Aid",
+        "Forgery",
+        "Gamble",
+        "Handgun",
+        "Heavy Weapons",
+        "Human Perception",
+        "Interrogation",
+        "Land Vehicle Tech",
+        "Language",
+        "Library Search",
+        "Lip Reading",
+        "Local Expert (Your Home)",
+        "Melee Weapon",
+        "Paint/Draw/Sculpt",
+        "Paramedic",
+        "Perception",
+        "Personal Grooming",
+        "Persuasion",
+        "Photography/Film",
+        "Pick Lock",
+        "Pick Pocket",
+        "Pilot Air Vehicle",
+        "Pilot Sea Vehicle",
+        "Resist Torture/Drugs",
+        "Riding",
+        "Sea Vehicle Tech",
+        "Shoulder Arms",
+        "Stealth",
+        "Streetwise",
+        "Tactics",
+        "Tracking",
+        "Trading",
+        "Wardrobe & Style",
+        "Weaponstech",
+        "Wilderness Survival",
+        ""
+      ]
+    },
+    "fireModes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "autoFire": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "suppressiveFire": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "autoFire",
+        "suppressiveFire"
+      ]
+    },
+    "damage": {
+      "type": "string",
+      "pattern": "(^[0-9]{1,2}d6$)|^0$"
+    },
+    "damageCrit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "threshold": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "bonus": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "threshold",
+        "count",
+        "bonus"
+      ]
+    },
+    "rof": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "dvTable": {
+      "type": "string",
+      "enum": [
+        "DV Assault Rifle",
+        "DV Assault Rifle (Autofire)",
+        "DV Bows & Crossbows",
+        "DV Generic",
+        "DV Grenade Launcher",
+        "DV Long-Barrel Pistol",
+        "DV Pistol",
+        "DV Rocket Launcher",
+        "DV SMG",
+        "DV SMG (Autofire)",
+        "DV Shotgun (Slug)",
+        "DV Sniper Rifle",
+        "DV Thrown Weapon",
+        ""
+      ]
+    },
+    "isRanged": {
+      "type": "boolean"
+    },
+    "unarmedAutomaticCalculation": {
+      "type": "boolean"
+    },
+    "attackmod": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "critFailEffect": {
+      "type": "string",
+      "enum": [
+        "destroyed",
+        "destroyedBeyondRepair",
+        "jammed",
+        "coinToss"
+      ]
+    },
+    "canIgnoreArmor": {
+      "type": "boolean"
+    },
+    "ignoreArmorPercent": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "ignoreBelowSP": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": [
+    "fireModes",
+    "damageCrit",
+    "rof",
+    "isRanged",
+    "unarmedAutomaticCalculation",
+    "attackmod",
+    "critFailEffect",
+    "canIgnoreArmor",
+    "ignoreArmorPercent"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "isRanged": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "dvTable": {
+            "not": {
+              "const": ""
+            }
+          }
+        }
+      }
+    }
+  ]
+}
