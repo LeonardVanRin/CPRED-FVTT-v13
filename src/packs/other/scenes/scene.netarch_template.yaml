@@ -1,0 +1,96 @@
+_id: 2LP7AhaMCAZnVvD4
+_key: "!scenes!2LP7AhaMCAZnVvD4"
+active: true
+background:
+  alphaThreshold: 0
+  anchorX: 0
+  anchorY: 0
+  fit: fill
+  offsetX: -2
+  offsetY: 1
+  rotation: 0
+  scaleX: 1
+  scaleY: 1
+  src: systems/cyberpunk-red-core/tiles/netarch/S0L-BlankNetMap-4k.jpg
+  tint: "#ffffff"
+backgroundColor: "#999999"
+drawings: []
+environment:
+  base:
+    hue: 0
+    intensity: 0
+    luminosity: 0
+    saturation: 0
+    shadows: 0
+  cycle: true
+  dark:
+    hue: 0.7138888888888889
+    intensity: 0
+    luminosity: -0.25
+    saturation: 0
+    shadows: 0
+  darknessLevel: 0
+  darknessLock: false
+  globalLight:
+    alpha: 0.5
+    bright: false
+    color: null
+    coloration: 1
+    contrast: 0
+    darkness:
+      max: 1
+      min: 0
+    enabled: false
+    luminosity: 0
+    saturation: 0
+    shadows: 0
+flags: {}
+fog:
+  colors:
+    explored: null
+    unexplored: null
+  exploration: true
+  overlay: null
+  reset: 1659831837776
+folder: null
+foreground: null
+foregroundElevation: null
+grid:
+  alpha: 0.2
+  color: "#000000"
+  distance: 8
+  size: 110
+  style: solidLines
+  thickness: 1
+  type: 1
+  units: bit
+height: 2160
+initial:
+  scale: 0.5
+  x: null
+  "y": null
+journal: null
+journalEntryPage: null
+levels: []
+lights: []
+name: Netarch Template
+navName: ""
+navOrder: 0
+navigation: false
+notes: []
+ownership:
+  default: 0
+padding: 0
+playlist: null
+playlistSound: null
+regions: []
+sort: 0
+sounds: []
+templates: []
+thumb: systems/cyberpunk-red-core/assets/scenes/Netarch_Template_thumb.webp
+tiles: []
+tokenVision: true
+tokens: []
+walls: []
+weather: ""
+width: 3840
