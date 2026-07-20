@@ -1,0 +1,148 @@
+_id: v3vCdxx4cB2cpQRz
+_key: "!tables!v3vCdxx4cB2cpQRz"
+description: >-
+  Table for rolling for the first two floors of a NET architecture, as detailed
+  on page 211.
+displayRoll: false
+flags: {}
+folder: null
+formula: 1d6
+img: systems/cyberpunk-red-core/icons/compendium/default/Default_Dice.svg
+name: First Two Floors (The Lobby)
+ownership:
+  default: 0
+replacement: true
+results:
+  - _id: 4YivN2GxxMcEqbgg
+    _key: "!tables.results!v3vCdxx4cB2cpQRz.4YivN2GxxMcEqbgg"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: File DV6
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 1
+      - 1
+    type: text
+    weight: 1
+  - _id: FpwuD8HqL7vOlAWa
+    _key: "!tables.results!v3vCdxx4cB2cpQRz.FpwuD8HqL7vOlAWa"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Password DV6
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 2
+      - 2
+    type: text
+    weight: 1
+  - _id: tYTXoUQbjehYaI3x
+    _key: "!tables.results!v3vCdxx4cB2cpQRz.tYTXoUQbjehYaI3x"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Password DV8
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 3
+      - 3
+    type: text
+    weight: 1
+  - _id: LkWlmvoF1VzQGvjk
+    _key: "!tables.results!v3vCdxx4cB2cpQRz.LkWlmvoF1VzQGvjk"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Skunk
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 4
+      - 4
+    type: text
+    weight: 1
+  - _id: nJbRxD9bzSS0gPje
+    _key: "!tables.results!v3vCdxx4cB2cpQRz.nJbRxD9bzSS0gPje"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Wisp
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 5
+      - 5
+    type: text
+    weight: 1
+  - _id: Lj9LliNyTtYbMUI1
+    _key: "!tables.results!v3vCdxx4cB2cpQRz.Lj9LliNyTtYbMUI1"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Killer
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 6
+      - 6
+    type: text
+    weight: 1
+sort: 0

@@ -1,0 +1,368 @@
+_id: EGQMcvtx6pn81Gdv
+_key: "!tables!EGQMcvtx6pn81Gdv"
+description: >-
+  Table for rolling for the basic floors of a NET architecture, as detailed on
+  page 211.
+displayRoll: false
+flags: {}
+folder: null
+formula: 3d6
+img: systems/cyberpunk-red-core/icons/compendium/default/Default_Dice.svg
+name: All Other Floors (Basic)
+ownership:
+  default: 0
+replacement: true
+results:
+  - _id: gTFymnRnYv0uzwPG
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.gTFymnRnYv0uzwPG"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Hellhound
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 3
+      - 3
+    type: text
+    weight: 1
+  - _id: OcfpWh052AlMRmJB
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.OcfpWh052AlMRmJB"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Sabertooth
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 4
+      - 4
+    type: text
+    weight: 1
+  - _id: 6zKmgA9bq0fqSvX2
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.6zKmgA9bq0fqSvX2"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Raven x2
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 5
+      - 5
+    type: text
+    weight: 1
+  - _id: TxpaqyUljo7WJxoH
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.TxpaqyUljo7WJxoH"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Hellhound
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 6
+      - 6
+    type: text
+    weight: 1
+  - _id: PyEP7XZdxLyjh8Yo
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.PyEP7XZdxLyjh8Yo"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Wisp
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 7
+      - 7
+    type: text
+    weight: 1
+  - _id: ZOvOmNVoyCJOqYoP
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.ZOvOmNVoyCJOqYoP"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Raven
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 8
+      - 8
+    type: text
+    weight: 1
+  - _id: 9MNZfkBOBwhCOTjU
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.9MNZfkBOBwhCOTjU"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Password DV6
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 9
+      - 9
+    type: text
+    weight: 1
+  - _id: dkOizxPow9rQOduG
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.dkOizxPow9rQOduG"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: File DV6
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 10
+      - 10
+    type: text
+    weight: 1
+  - _id: TPrJEJkXVskySHcy
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.TPrJEJkXVskySHcy"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Control Node DV6
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 11
+      - 11
+    type: text
+    weight: 1
+  - _id: uZutrunJaCj3I3u0
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.uZutrunJaCj3I3u0"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Password DV6
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 12
+      - 12
+    type: text
+    weight: 1
+  - _id: Yk0NCUQVbAnsy1U0
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.Yk0NCUQVbAnsy1U0"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Skunk
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 13
+      - 13
+    type: text
+    weight: 1
+  - _id: HVcgCTtotxv3c1jA
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.HVcgCTtotxv3c1jA"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Asp
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 14
+      - 14
+    type: text
+    weight: 1
+  - _id: 7mDiGoSfFC7OIC8I
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.7mDiGoSfFC7OIC8I"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Scorpion
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 15
+      - 15
+    type: text
+    weight: 1
+  - _id: e86hWgiH9l8h1AZe
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.e86hWgiH9l8h1AZe"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Killer, Skunk
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 16
+      - 16
+    type: text
+    weight: 1
+  - _id: 42tU8yLFBTygWzOz
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.42tU8yLFBTygWzOz"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Wisp x3
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 17
+      - 17
+    type: text
+    weight: 1
+  - _id: bFmeEyNKGPsKOb7f
+    _key: "!tables.results!EGQMcvtx6pn81Gdv.bFmeEyNKGPsKOb7f"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: Liche
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 18
+      - 18
+    type: text
+    weight: 1
+sort: 0
