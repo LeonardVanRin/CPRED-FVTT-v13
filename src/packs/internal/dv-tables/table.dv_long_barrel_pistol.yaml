@@ -1,0 +1,190 @@
+_id: O9sHkNja0lU0lMaW
+_key: "!tables!O9sHkNja0lU0lMaW"
+description: <p>12 Days of REDmas Page 3</p>
+displayRoll: false
+flags: {}
+folder: null
+formula: ""
+img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+name: DV Long-Barrel Pistol
+ownership:
+  default: 0
+replacement: false
+results:
+  - _id: Y199wnNcv3Pr3mDi
+    _key: "!tables.results!O9sHkNja0lU0lMaW.Y199wnNcv3Pr3mDi"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "14"
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 0
+      - 6
+    type: text
+    weight: 1
+  - _id: 0TL5fCkZVI8hJktU
+    _key: "!tables.results!O9sHkNja0lU0lMaW.0TL5fCkZVI8hJktU"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "13"
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 7
+      - 12
+    type: text
+    weight: 1
+  - _id: 2W5pgeHM4VmWP1FR
+    _key: "!tables.results!O9sHkNja0lU0lMaW.2W5pgeHM4VmWP1FR"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "14"
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 13
+      - 25
+    type: text
+    weight: 1
+  - _id: wQicjfi13EG2Xpnu
+    _key: "!tables.results!O9sHkNja0lU0lMaW.wQicjfi13EG2Xpnu"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "20"
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 26
+      - 50
+    type: text
+    weight: 1
+  - _id: dpRnFgx39J5dZA9c
+    _key: "!tables.results!O9sHkNja0lU0lMaW.dpRnFgx39J5dZA9c"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "25"
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 51
+      - 100
+    type: text
+    weight: 1
+  - _id: 9jv8FYOBp133dBQS
+    _key: "!tables.results!O9sHkNja0lU0lMaW.9jv8FYOBp133dBQS"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "28"
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 101
+      - 200
+    type: text
+    weight: 1
+  - _id: MbZtMy7CivEJ3bMK
+    _key: "!tables.results!O9sHkNja0lU0lMaW.MbZtMy7CivEJ3bMK"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "30"
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 201
+      - 400
+    type: text
+    weight: 1
+  - _id: LbTvslu73ZSMQ5mi
+    _key: "!tables.results!O9sHkNja0lU0lMaW.LbTvslu73ZSMQ5mi"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: N/A
+    drawn: false
+    flags: {}
+    img: icons/svg/d20-black.svg
+    name: ""
+    range:
+      - 401
+      - 800
+    type: text
+    weight: 1
+sort: 0

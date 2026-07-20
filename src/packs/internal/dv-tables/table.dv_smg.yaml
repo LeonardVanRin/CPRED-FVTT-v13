@@ -1,0 +1,190 @@
+_id: kWQKqfIEnkc92gxY
+_key: "!tables!kWQKqfIEnkc92gxY"
+description: <p>Core Rulebook Page 173</p>
+displayRoll: false
+flags: {}
+folder: null
+formula: ""
+img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+name: DV SMG
+ownership:
+  default: 0
+replacement: false
+results:
+  - _id: 19yKJf6NqfKVEN7f
+    _key: "!tables.results!kWQKqfIEnkc92gxY.19yKJf6NqfKVEN7f"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "15"
+    drawn: false
+    flags: {}
+    img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+    name: ""
+    range:
+      - 0
+      - 6
+    type: text
+    weight: 1
+  - _id: 9VKn8dGQCjJfE6S1
+    _key: "!tables.results!kWQKqfIEnkc92gxY.9VKn8dGQCjJfE6S1"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "13"
+    drawn: false
+    flags: {}
+    img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+    name: ""
+    range:
+      - 7
+      - 12
+    type: text
+    weight: 1
+  - _id: 3czMeaPedCopFyI4
+    _key: "!tables.results!kWQKqfIEnkc92gxY.3czMeaPedCopFyI4"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "15"
+    drawn: false
+    flags: {}
+    img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+    name: ""
+    range:
+      - 13
+      - 25
+    type: text
+    weight: 1
+  - _id: fesSATpfvzeXlnU6
+    _key: "!tables.results!kWQKqfIEnkc92gxY.fesSATpfvzeXlnU6"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "20"
+    drawn: false
+    flags: {}
+    img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+    name: ""
+    range:
+      - 26
+      - 50
+    type: text
+    weight: 1
+  - _id: P2myh3wnD11t1UYR
+    _key: "!tables.results!kWQKqfIEnkc92gxY.P2myh3wnD11t1UYR"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "25"
+    drawn: false
+    flags: {}
+    img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+    name: ""
+    range:
+      - 51
+      - 100
+    type: text
+    weight: 1
+  - _id: fQFcxnH6SsW8LAHQ
+    _key: "!tables.results!kWQKqfIEnkc92gxY.fQFcxnH6SsW8LAHQ"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "25"
+    drawn: false
+    flags: {}
+    img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+    name: ""
+    range:
+      - 101
+      - 200
+    type: text
+    weight: 1
+  - _id: WSAbIJ2ypeYVTDNi
+    _key: "!tables.results!kWQKqfIEnkc92gxY.WSAbIJ2ypeYVTDNi"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: "30"
+    drawn: false
+    flags: {}
+    img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+    name: ""
+    range:
+      - 201
+      - 400
+    type: text
+    weight: 1
+  - _id: onHEenWgxms8G1UJ
+    _key: "!tables.results!kWQKqfIEnkc92gxY.onHEenWgxms8G1UJ"
+    _stats:
+      compendiumSource: null
+      coreVersion: "13.351"
+      createdTime: null
+      duplicateSource: null
+      exportSource: null
+      lastModifiedBy: null
+      modifiedTime: null
+      systemId: null
+      systemVersion: null
+    description: N/A
+    drawn: false
+    flags: {}
+    img: systems/cyberpunk-red-core/icons/compendium/default/Default_DV_Table.svg
+    name: ""
+    range:
+      - 401
+      - 800
+    type: text
+    weight: 1
+sort: 0
