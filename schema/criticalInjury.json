@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "criticalInjury"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "system": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./components/common.json"
+        },
+        {
+          "$ref": "./components/effects.json"
+        }
+      ],
+      "properties": {
+        "location": {
+          "type": "string",
+          "enum": [
+            "body",
+            "head"
+          ]
+        },
+        "quickFix": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "firstAidParamedic",
+                "paramedic",
+                "notApplicable"
+              ]
+            },
+            "dvFirstAid": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "dvParamedic": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "dvFirstAid",
+            "dvParamedic"
+          ]
+        },
+        "treatment": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "paramedicSurgery",
+                "quickFix",
+                "surgery"
+              ]
+            },
+            "dvParamedic": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "dvSurgery": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "dvParamedic",
+            "dvSurgery"
+          ]
+        },
+        "deathSaveIncrease": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "quickFix",
+        "treatment",
+        "deathSaveIncrease"
+      ]
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/effect.json"
+      }
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "effects",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "sort",
+    "system",
+    "type"
+  ]
+}

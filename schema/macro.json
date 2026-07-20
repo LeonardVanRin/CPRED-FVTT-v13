@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "script",
+        "chat"
+      ]
+    },
+    "author": {
+      "type": "string"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "global",
+        "actors",
+        "actor"
+      ]
+    },
+    "command": {
+      "type": "string"
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "author",
+    "command",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "scope",
+    "sort",
+    "type"
+  ]
+}

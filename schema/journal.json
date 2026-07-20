@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/page.json"
+      }
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "sort": {
+            "type": "integer"
+          },
+          "flags": {
+            "type": "object"
+          },
+          "_stats": {
+            "$ref": "./components/stats.json"
+          },
+          "_key": {
+            "type": "string",
+            "pattern": "^!"
+          }
+        },
+        "required": [
+          "_id",
+          "name",
+          "sort",
+          "flags",
+          "_stats"
+        ]
+      }
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "categories",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "pages",
+    "sort"
+  ]
+}

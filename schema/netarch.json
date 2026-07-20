@@ -1,0 +1,180 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "netarch"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "system": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./components/common.json"
+        },
+        {
+          "$ref": "./components/valuable.json"
+        }
+      ],
+      "properties": {
+        "floors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "blackice": {
+                "type": "string",
+                "enum": [
+                  "--",
+                  "CPR.netArchitecture.floor.options.blackIce.asp",
+                  "CPR.netArchitecture.floor.options.blackIce.giant",
+                  "CPR.netArchitecture.floor.options.blackIce.hellhound",
+                  "CPR.netArchitecture.floor.options.blackIce.kraken",
+                  "CPR.netArchitecture.floor.options.blackIce.liche",
+                  "CPR.netArchitecture.floor.options.blackIce.raven",
+                  "CPR.netArchitecture.floor.options.blackIce.scorpion",
+                  "CPR.netArchitecture.floor.options.blackIce.skunk",
+                  "CPR.netArchitecture.floor.options.blackIce.wisp",
+                  "CPR.netArchitecture.floor.options.blackIce.dragon",
+                  "CPR.netArchitecture.floor.options.blackIce.killer",
+                  "CPR.netArchitecture.floor.options.blackIce.sabertooth"
+                ]
+              },
+              "branch": {
+                "type": "string",
+                "enum": [
+                  "a",
+                  "b",
+                  "c",
+                  "d",
+                  "e",
+                  "f",
+                  "g",
+                  "h"
+                ]
+              },
+              "content": {
+                "type": "string",
+                "enum": [
+                  "CPR.netArchitecture.floor.options.password",
+                  "CPR.netArchitecture.floor.options.file",
+                  "CPR.netArchitecture.floor.options.controlnode",
+                  "CPR.global.programClass.blackice"
+                ]
+              },
+              "description": {
+                "type": "string"
+              },
+              "dv": {
+                "type": "string",
+                "enum": [
+                  "N/A",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15",
+                  "16",
+                  "17",
+                  "18",
+                  "19",
+                  "20"
+                ]
+              },
+              "floor": {
+                "type": "string",
+                "enum": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7",
+                  "8",
+                  "9",
+                  "10",
+                  "11",
+                  "12",
+                  "13",
+                  "14",
+                  "15",
+                  "16",
+                  "17",
+                  "18"
+                ]
+              },
+              "index": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "index"
+            ]
+          }
+        }
+      },
+      "required": [
+        "floors"
+      ]
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/effect.json"
+      }
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "effects",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "sort",
+    "system",
+    "type"
+  ]
+}

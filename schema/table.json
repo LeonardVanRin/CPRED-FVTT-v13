@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "description": {
+      "type": "string"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/result.json"
+      }
+    },
+    "formula": {
+      "type": "string"
+    },
+    "replacement": {
+      "type": "boolean"
+    },
+    "displayRoll": {
+      "type": "boolean"
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "description",
+    "displayRoll",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "replacement",
+    "results",
+    "sort"
+  ]
+}

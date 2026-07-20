@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "weapon"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "system": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./components/attackable.json"
+        },
+        {
+          "$ref": "./components/common.json"
+        },
+        {
+          "$ref": "./components/container.json"
+        },
+        {
+          "$ref": "./components/effects.json"
+        },
+        {
+          "$ref": "./components/equippable.json"
+        },
+        {
+          "$ref": "./components/loadable.json"
+        },
+        {
+          "$ref": "./components/physical.json"
+        },
+        {
+          "$ref": "./components/quality.json"
+        },
+        {
+          "$ref": "./components/upgradable.json"
+        },
+        {
+          "$ref": "./components/valuable.json"
+        }
+      ],
+      "properties": {
+        "handsReq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "weaponSkill": {
+          "type": "string",
+          "enum": [
+            "Accounting",
+            "Acting",
+            "Air Vehicle Tech",
+            "Animal Handling",
+            "Archery",
+            "Athletics",
+            "Autofire",
+            "Basic Tech",
+            "Brawling",
+            "Bribery",
+            "Bureaucracy",
+            "Business",
+            "Composition",
+            "Conceal/Reveal Object",
+            "Concentration",
+            "Contortionist",
+            "Conversation",
+            "Criminology",
+            "Cryptography",
+            "Cybertech",
+            "Dance",
+            "Deduction",
+            "Demolitions",
+            "Drive Land Vehicle",
+            "Education",
+            "Electronics/Security Tech",
+            "Endurance",
+            "Evasion",
+            "First Aid",
+            "Forgery",
+            "Gamble",
+            "Handgun",
+            "Heavy Weapons",
+            "Human Perception",
+            "Interrogation",
+            "Land Vehicle Tech",
+            "Language",
+            "Library Search",
+            "Lip Reading",
+            "Local Expert (Your Home)",
+            "Melee Weapon",
+            "Paint/Draw/Sculpt",
+            "Paramedic",
+            "Perception",
+            "Personal Grooming",
+            "Persuasion",
+            "Photography/Film",
+            "Pick Lock",
+            "Pick Pocket",
+            "Pilot Air Vehicle",
+            "Pilot Sea Vehicle",
+            "Resist Torture/Drugs",
+            "Riding",
+            "Sea Vehicle Tech",
+            "Shoulder Arms",
+            "Stealth",
+            "Streetwise",
+            "Tactics",
+            "Tracking",
+            "Trading",
+            "Wardrobe & Style",
+            "Weaponstech",
+            "Wilderness Survival"
+          ]
+        }
+      },
+      "required": [
+        "handsReq"
+      ]
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/effect.json"
+      }
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "effects",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "sort",
+    "system",
+    "type"
+  ]
+}

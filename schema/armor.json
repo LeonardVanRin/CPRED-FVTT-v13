@@ -1,0 +1,166 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "armor"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "system": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./components/common.json"
+        },
+        {
+          "$ref": "./components/container.json"
+        },
+        {
+          "$ref": "./components/effects.json"
+        },
+        {
+          "$ref": "./components/electronic.json"
+        },
+        {
+          "$ref": "./components/equippable.json"
+        },
+        {
+          "$ref": "./components/physical.json"
+        },
+        {
+          "$ref": "./components/upgradable.json"
+        },
+        {
+          "$ref": "./components/valuable.json"
+        }
+      ],
+      "properties": {
+        "isBodyLocation": {
+          "type": "boolean"
+        },
+        "isHeadLocation": {
+          "type": "boolean"
+        },
+        "isShield": {
+          "type": "boolean"
+        },
+        "bodyLocation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "sp": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "ablation": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "sp",
+            "ablation"
+          ]
+        },
+        "headLocation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "sp": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "ablation": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "sp",
+            "ablation"
+          ]
+        },
+        "shieldHitPoints": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "max": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "value",
+            "max"
+          ]
+        },
+        "penalty": {
+          "type": "integer",
+          "minimum": -10
+        }
+      },
+      "required": [
+        "isBodyLocation",
+        "isHeadLocation",
+        "isShield",
+        "bodyLocation",
+        "headLocation",
+        "shieldHitPoints",
+        "penalty"
+      ]
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/effect.json"
+      }
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "effects",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "sort",
+    "system",
+    "type"
+  ]
+}

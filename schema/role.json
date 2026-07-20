@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "role"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "system": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./components/common.json"
+        }
+      ],
+      "properties": {
+        "rank": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "mainRoleAbility": {
+          "type": "string"
+        },
+        "hasRoll": {
+          "type": "boolean"
+        },
+        "addRoleAbilityRank": {
+          "type": "boolean"
+        },
+        "stat": {
+          "type": "string",
+          "enum": [
+            "--",
+            "int",
+            "ref",
+            "dex",
+            "tech",
+            "cool",
+            "will",
+            "move",
+            "body",
+            "luck",
+            "emp"
+          ]
+        },
+        "skill": {
+          "type": "string"
+        },
+        "bonuses": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "universalBonuses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "attack",
+              "damage",
+              "damageReduction",
+              "initiative",
+              "fumbleRecovery"
+            ]
+          }
+        },
+        "bonusRatio": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "abilities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "rank": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "multiplier": {
+                "type": "number",
+                "enum": [
+                  0.25,
+                  0.5,
+                  1,
+                  2
+                ],
+                "minimum": 0.25
+              },
+              "stat": {
+                "type": "string",
+                "enum": [
+                  "--",
+                  "int",
+                  "ref",
+                  "dex",
+                  "tech",
+                  "cool",
+                  "will",
+                  "move",
+                  "body",
+                  "luck",
+                  "emp"
+                ]
+              },
+              "hasRoll": {
+                "type": "boolean"
+              },
+              "skill": {},
+              "bonuses": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "universalBonuses": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "attack",
+                    "damage",
+                    "damageReduction",
+                    "initiative",
+                    "fumbleRecovery"
+                  ]
+                }
+              },
+              "bonusRatio": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "isSituational": {
+                "type": "boolean"
+              },
+              "onByDefault": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "name",
+              "rank",
+              "multiplier",
+              "stat",
+              "hasRoll",
+              "skill",
+              "bonuses",
+              "universalBonuses",
+              "bonusRatio",
+              "isSituational",
+              "onByDefault"
+            ]
+          }
+        },
+        "isSituational": {
+          "type": "boolean"
+        },
+        "onByDefault": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "rank",
+        "hasRoll",
+        "addRoleAbilityRank",
+        "bonuses",
+        "universalBonuses",
+        "bonusRatio",
+        "abilities",
+        "isSituational",
+        "onByDefault"
+      ]
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/effect.json"
+      }
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "effects",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "sort",
+    "system",
+    "type"
+  ]
+}

@@ -1,0 +1,1194 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "type": {
+      "type": "string",
+      "const": "mook"
+    },
+    "system": {
+      "type": "object",
+      "properties": {
+        "stats": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "int": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "ref": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "dex": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "tech": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "cool": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "will": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "luck": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value",
+                "max"
+              ]
+            },
+            "move": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "body": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "emp": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": -10
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value",
+                "max"
+              ]
+            }
+          },
+          "required": [
+            "int",
+            "ref",
+            "dex",
+            "tech",
+            "cool",
+            "will",
+            "luck",
+            "move",
+            "body",
+            "emp"
+          ]
+        },
+        "externalData": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "currentArmorBody": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "id",
+                "value",
+                "max"
+              ]
+            },
+            "currentArmorHead": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "id",
+                "value",
+                "max"
+              ]
+            },
+            "currentArmorShield": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "id",
+                "value",
+                "max"
+              ]
+            },
+            "currentWeapon": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "max": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "id",
+                "value",
+                "max"
+              ]
+            }
+          },
+          "required": [
+            "currentArmorBody",
+            "currentArmorHead",
+            "currentArmorShield",
+            "currentWeapon"
+          ]
+        },
+        "derivedStats": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "currentWoundState": {
+              "type": "string",
+              "enum": [
+                "notWounded",
+                "lightlyWounded",
+                "seriouslyWounded",
+                "mortallyWounded",
+                "dead"
+              ]
+            },
+            "deathSave": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "basePenalty": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "penalty": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "basePenalty",
+                "penalty",
+                "value"
+              ]
+            },
+            "hp": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "max": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "transactions": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "max",
+                "transactions",
+                "value"
+              ]
+            },
+            "humanity": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "max": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "transactions": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "value": {
+                  "type": "integer",
+                  "minimum": -100
+                }
+              },
+              "required": [
+                "max",
+                "transactions",
+                "value"
+              ]
+            },
+            "run": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "seriouslyWounded": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "walk": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "value": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          },
+          "required": [
+            "deathSave",
+            "hp",
+            "humanity",
+            "run",
+            "seriouslyWounded",
+            "walk"
+          ]
+        },
+        "information": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "alias": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "history": {
+              "type": "string"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "alias",
+            "description",
+            "history",
+            "notes"
+          ]
+        },
+        "reputation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "transactions": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "value": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "transactions",
+            "value"
+          ]
+        },
+        "roleInfo": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "activeNetRole": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "activeRole": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "activeNetRole",
+            "activeRole"
+          ]
+        },
+        "weapons": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {}
+        },
+        "installedItems": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "allowed": {
+              "type": "boolean"
+            },
+            "allowedTypes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ammo",
+                  "cyberdeck",
+                  "cyberware",
+                  "itemUpgrade",
+                  "program",
+                  ""
+                ]
+              }
+            },
+            "list": {
+              "type": "array",
+              "items": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "required": [
+            "allowed",
+            "allowedTypes",
+            "list"
+          ]
+        }
+      },
+      "required": [
+        "stats",
+        "externalData",
+        "derivedStats",
+        "information",
+        "reputation",
+        "roleInfo",
+        "weapons",
+        "installedItems"
+      ],
+      "additionalProperties": false
+    },
+    "prototypeToken": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "number",
+          "enum": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ]
+        },
+        "actorLink": {
+          "type": "boolean"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        },
+        "texture": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "src": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "anchorX": {
+              "type": "number"
+            },
+            "anchorY": {
+              "type": "number"
+            },
+            "offsetX": {
+              "type": "integer"
+            },
+            "offsetY": {
+              "type": "integer"
+            },
+            "fit": {
+              "type": "string",
+              "enum": [
+                "fill",
+                "contain",
+                "cover",
+                "width",
+                "height"
+              ]
+            },
+            "scaleX": {
+              "type": "number"
+            },
+            "scaleY": {
+              "type": "number"
+            },
+            "rotation": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 360
+            },
+            "tint": {
+              "type": "string"
+            },
+            "alphaThreshold": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "src",
+            "anchorX",
+            "anchorY",
+            "offsetX",
+            "offsetY",
+            "fit",
+            "scaleX",
+            "scaleY",
+            "rotation",
+            "tint",
+            "alphaThreshold"
+          ]
+        },
+        "lockRotation": {
+          "type": "boolean"
+        },
+        "rotation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 360
+        },
+        "alpha": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "disposition": {
+          "type": "number",
+          "enum": [
+            -2,
+            -1,
+            0,
+            1
+          ]
+        },
+        "displayBars": {
+          "type": "number",
+          "enum": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ]
+        },
+        "bar1": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "attribute": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "attribute"
+          ]
+        },
+        "bar2": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "attribute": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "attribute"
+          ]
+        },
+        "light": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "negative": {
+              "type": "boolean"
+            },
+            "priority": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "alpha": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "angle": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 360
+            },
+            "bright": {
+              "type": "number",
+              "minimum": 0
+            },
+            "color": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "coloration": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "dim": {
+              "type": "number",
+              "minimum": 0
+            },
+            "attenuation": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "luminosity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "saturation": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            },
+            "contrast": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            },
+            "shadows": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "animation": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "speed": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 10
+                },
+                "intensity": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 10
+                },
+                "reverse": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "speed",
+                "intensity",
+                "reverse"
+              ]
+            },
+            "darkness": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "min": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "max": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              },
+              "required": [
+                "min",
+                "max"
+              ]
+            }
+          },
+          "required": [
+            "negative",
+            "priority",
+            "alpha",
+            "angle",
+            "bright",
+            "coloration",
+            "dim",
+            "attenuation",
+            "luminosity",
+            "saturation",
+            "contrast",
+            "shadows",
+            "animation",
+            "darkness"
+          ]
+        },
+        "sight": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "range": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "angle": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 360
+            },
+            "visionMode": {
+              "type": "string"
+            },
+            "color": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "attenuation": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "brightness": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            },
+            "saturation": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            },
+            "contrast": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            }
+          },
+          "required": [
+            "enabled",
+            "range",
+            "angle",
+            "visionMode",
+            "attenuation",
+            "brightness",
+            "saturation",
+            "contrast"
+          ]
+        },
+        "detectionModes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "range": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "required": [
+              "enabled",
+              "range"
+            ]
+          }
+        },
+        "occludable": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "radius": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "radius"
+          ]
+        },
+        "ring": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "colors": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "ring": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "background": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "effects": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 8388607
+            },
+            "subject": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "scale": {
+                  "type": "number",
+                  "minimum": 0.5
+                },
+                "texture": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "scale"
+              ]
+            }
+          },
+          "required": [
+            "enabled",
+            "colors",
+            "effects",
+            "subject"
+          ]
+        },
+        "turnMarker": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "mode": {
+              "type": "number",
+              "enum": [
+                0,
+                1,
+                2
+              ]
+            },
+            "animation": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "src": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "disposition": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "mode",
+            "animation",
+            "disposition"
+          ]
+        },
+        "movementAction": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "walk",
+            "fly",
+            "swim",
+            "burrow",
+            "crawl",
+            "climb",
+            "jump",
+            "blink",
+            "displace"
+          ]
+        },
+        "flags": {
+          "type": "object"
+        },
+        "randomImg": {
+          "type": "boolean"
+        },
+        "appendNumber": {
+          "type": "boolean"
+        },
+        "prependAdjective": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "displayName",
+        "actorLink",
+        "width",
+        "height",
+        "texture",
+        "lockRotation",
+        "rotation",
+        "alpha",
+        "disposition",
+        "displayBars",
+        "bar1",
+        "bar2",
+        "light",
+        "sight",
+        "detectionModes",
+        "occludable",
+        "ring",
+        "turnMarker",
+        "movementAction",
+        "flags",
+        "randomImg",
+        "appendNumber",
+        "prependAdjective"
+      ]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "img": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "system": {
+            "type": "object"
+          },
+          "effects": {
+            "type": "array",
+            "items": {
+              "$ref": "./components/effect.json"
+            }
+          },
+          "folder": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sort": {
+            "type": "integer"
+          },
+          "ownership": {
+            "type": "object"
+          },
+          "flags": {
+            "type": "object"
+          },
+          "_stats": {
+            "$ref": "./components/stats.json"
+          },
+          "_key": {
+            "type": "string",
+            "pattern": "^!"
+          }
+        },
+        "required": [
+          "_id",
+          "name",
+          "type",
+          "system",
+          "effects",
+          "folder",
+          "sort",
+          "ownership",
+          "flags",
+          "_stats"
+        ]
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/effect.json"
+      }
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "effects",
+    "flags",
+    "folder",
+    "items",
+    "name",
+    "ownership",
+    "prototypeToken",
+    "sort",
+    "system",
+    "type"
+  ]
+}

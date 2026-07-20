@@ -1,0 +1,498 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "itemUpgrade"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "system": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./components/attackable.json"
+        },
+        {
+          "$ref": "./components/common.json"
+        },
+        {
+          "$ref": "./components/container.json"
+        },
+        {
+          "$ref": "./components/effects.json"
+        },
+        {
+          "$ref": "./components/electronic.json"
+        },
+        {
+          "$ref": "./components/installable.json"
+        },
+        {
+          "$ref": "./components/loadable.json"
+        },
+        {
+          "$ref": "./components/physical.json"
+        },
+        {
+          "$ref": "./components/valuable.json"
+        }
+      ],
+      "properties": {
+        "handsReq": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "modifiers": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "secondaryWeapon": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "configured": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "configured"
+              ]
+            },
+            "attackmod": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "damage": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "rof": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "magazine": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "sdp": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "seats": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "speedCombat": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "slots": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "bodySp": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "headSp": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "shieldHp": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "Wardrobe & Style": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            },
+            "cool": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "modifier",
+                    "override"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "isSituational": {
+                  "type": "boolean"
+                },
+                "onByDefault": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "value"
+              ]
+            }
+          },
+          "required": [
+            "secondaryWeapon"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "armor",
+            "clothing",
+            "cyberdeck",
+            "cyberware",
+            "gear",
+            "vehicle",
+            "weapon"
+          ]
+        }
+      },
+      "required": [
+        "handsReq",
+        "modifiers"
+      ]
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/effect.json"
+      }
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "effects",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "sort",
+    "system",
+    "type"
+  ]
+}

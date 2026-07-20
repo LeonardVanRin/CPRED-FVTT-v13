@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "_key": {
+      "$ref": "./components/key.json"
+    },
+    "_id": {
+      "$ref": "./components/id.json"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "const": "cyberware"
+    },
+    "img": {
+      "$ref": "./components/img.json"
+    },
+    "system": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "./components/attackable.json"
+        },
+        {
+          "$ref": "./components/common.json"
+        },
+        {
+          "$ref": "./components/container.json"
+        },
+        {
+          "$ref": "./components/effects.json"
+        },
+        {
+          "$ref": "./components/electronic.json"
+        },
+        {
+          "$ref": "./components/installable.json"
+        },
+        {
+          "$ref": "./components/loadable.json"
+        },
+        {
+          "$ref": "./components/physical.json"
+        },
+        {
+          "$ref": "./components/upgradable.json"
+        },
+        {
+          "$ref": "./components/valuable.json"
+        },
+        {
+          "if": {
+            "properties": {
+              "isWeapon": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "weaponSkill": {
+                "enum": [
+                  "Accounting",
+                  "Acting",
+                  "Air Vehicle Tech",
+                  "Animal Handling",
+                  "Archery",
+                  "Athletics",
+                  "Autofire",
+                  "Basic Tech",
+                  "Brawling",
+                  "Bribery",
+                  "Bureaucracy",
+                  "Business",
+                  "Composition",
+                  "Conceal/Reveal Object",
+                  "Concentration",
+                  "Contortionist",
+                  "Conversation",
+                  "Criminology",
+                  "Cryptography",
+                  "Cybertech",
+                  "Dance",
+                  "Deduction",
+                  "Demolitions",
+                  "Drive Land Vehicle",
+                  "Education",
+                  "Electronics/Security Tech",
+                  "Endurance",
+                  "Evasion",
+                  "First Aid",
+                  "Forgery",
+                  "Gamble",
+                  "Handgun",
+                  "Heavy Weapons",
+                  "Human Perception",
+                  "Interrogation",
+                  "Land Vehicle Tech",
+                  "Language",
+                  "Library Search",
+                  "Lip Reading",
+                  "Local Expert (Your Home)",
+                  "Melee Weapon",
+                  "Paint/Draw/Sculpt",
+                  "Paramedic",
+                  "Perception",
+                  "Personal Grooming",
+                  "Persuasion",
+                  "Photography/Film",
+                  "Pick Lock",
+                  "Pick Pocket",
+                  "Pilot Air Vehicle",
+                  "Pilot Sea Vehicle",
+                  "Resist Torture/Drugs",
+                  "Riding",
+                  "Sea Vehicle Tech",
+                  "Shoulder Arms",
+                  "Stealth",
+                  "Streetwise",
+                  "Tactics",
+                  "Tracking",
+                  "Trading",
+                  "Wardrobe & Style",
+                  "Weaponstech",
+                  "Wilderness Survival"
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "cyberAudioSuite",
+            "cyberEye",
+            "cyberArm",
+            "cyberLeg",
+            "neuralWare",
+            "cyberwareInternal",
+            "cyberwareExternal",
+            "fashionware",
+            "borgware"
+          ]
+        },
+        "isWeapon": {
+          "type": "boolean"
+        },
+        "isFoundational": {
+          "type": "boolean"
+        },
+        "core": {
+          "type": "boolean"
+        },
+        "humanityLoss": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "static": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "roll": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "static"
+          ]
+        }
+      },
+      "required": [
+        "isWeapon",
+        "isFoundational",
+        "core",
+        "humanityLoss"
+      ]
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "./components/effect.json"
+      }
+    },
+    "folder": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./components/stats.json"
+    }
+  },
+  "required": [
+    "_id",
+    "_key",
+    "effects",
+    "flags",
+    "folder",
+    "name",
+    "ownership",
+    "sort",
+    "system",
+    "type"
+  ]
+}
