@@ -1,0 +1,1 @@
+bash .husky/scripts/deps-changed-hook.sh
