@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "revealed": {
+      "type": "boolean",
+      "const": true
+    },
+    "usage": {
+      "type": "string",
+      "enum": [
+        "always",
+        "carried",
+        "equipped",
+        "installed",
+        "rezzed",
+        "snorted",
+        "toggled"
+      ]
+    }
+  },
+  "required": [
+    "revealed"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "system": {
+      "type": "object"
+    },
+    "title": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "show": {
+          "type": "boolean"
+        },
+        "level": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "show",
+        "level"
+      ]
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "caption": {
+          "type": "string"
+        }
+      }
+    },
+    "text": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "markdown": {
+          "type": "string"
+        },
+        "format": {
+          "type": "number"
+        }
+      }
+    },
+    "video": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "controls": {
+          "type": "boolean"
+        },
+        "loop": {
+          "type": "boolean"
+        },
+        "autoplay": {
+          "type": "boolean"
+        },
+        "volume": {
+          "type": "number"
+        },
+        "timestamp": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "controls",
+        "volume"
+      ]
+    },
+    "src": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "category": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "ownership": {
+      "type": "object"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./stats.json"
+    },
+    "_key": {
+      "type": "string",
+      "pattern": "^!"
+    }
+  },
+  "required": [
+    "_id",
+    "name",
+    "type",
+    "system",
+    "title",
+    "image",
+    "text",
+    "video",
+    "category",
+    "sort",
+    "ownership",
+    "flags",
+    "_stats"
+  ]
+}

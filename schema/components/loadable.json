@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "properties": {
+    "usesType": {
+      "type": "string",
+      "enum": [
+        "magazine"
+      ]
+    },
+    "magazine": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ammoData": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "uuid": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "value",
+        "max",
+        "ammoData"
+      ]
+    },
+    "ammoVariety": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "arrow",
+          "battery",
+          "grenade",
+          "heavyPistol",
+          "medPistol",
+          "paintball",
+          "rifle",
+          "rocket",
+          "shotgunShell",
+          "shotgunSlug",
+          "vHeavyPistol",
+          "custom"
+        ]
+      }
+    }
+  },
+  "required": [
+    "magazine",
+    "ammoVariety",
+    "usesType"
+  ]
+}

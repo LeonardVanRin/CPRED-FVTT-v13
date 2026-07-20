@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "installedItems": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "allowed": {
+          "type": "boolean"
+        },
+        "allowedTypes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "ammo",
+              "cyberdeck",
+              "cyberware",
+              "itemUpgrade",
+              "program",
+              ""
+            ]
+          }
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "usedSlots": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "slots": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "allowed",
+        "allowedTypes",
+        "list",
+        "usedSlots",
+        "slots"
+      ]
+    }
+  },
+  "required": [
+    "installedItems"
+  ]
+}

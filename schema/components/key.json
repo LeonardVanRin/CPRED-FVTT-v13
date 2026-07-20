@@ -1,0 +1,12 @@
+{
+  "description": "A compendium LevelDB key",
+  "type": "string",
+  "oneOf": [
+    {
+      "pattern": "^!(items|scenes|tables|macros)![0-9a-zA-Z]{16}$"
+    },
+    {
+      "pattern": "^!(items|scenes|tables|macros)\\.(effects|results)![0-9a-zA-Z]{16}\\.[0-9a-zA-Z]{16}$"
+    }
+  ]
+}

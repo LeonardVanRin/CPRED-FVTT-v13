@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "isElectronic": {
+      "type": "boolean"
+    },
+    "providesHardening": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "isElectronic",
+    "providesHardening"
+  ]
+}

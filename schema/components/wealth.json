@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "properties": {
+    "wealth": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "transactions": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "transactions",
+        "value"
+      ]
+    }
+  },
+  "required": [
+    "wealth"
+  ]
+}

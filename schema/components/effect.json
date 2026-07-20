@@ -1,0 +1,160 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "img": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "type": "string"
+    },
+    "system": {
+      "type": "object"
+    },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "integer"
+          },
+          "priority": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "key",
+          "value",
+          "mode"
+        ]
+      }
+    },
+    "disabled": {
+      "type": "boolean"
+    },
+    "duration": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "startTime": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "seconds": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "combat": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rounds": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "turns": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "startRound": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "startTurn": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "combat"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "origin": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tint": {
+      "type": "string"
+    },
+    "transfer": {
+      "type": "boolean"
+    },
+    "statuses": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "sort": {
+      "type": "integer"
+    },
+    "flags": {
+      "type": "object"
+    },
+    "_stats": {
+      "$ref": "./stats.json"
+    },
+    "_key": {
+      "type": "string",
+      "pattern": "^!"
+    }
+  },
+  "required": [
+    "_id",
+    "name",
+    "type",
+    "system",
+    "changes",
+    "disabled",
+    "duration",
+    "description",
+    "transfer",
+    "statuses",
+    "sort",
+    "flags",
+    "_stats"
+  ]
+}

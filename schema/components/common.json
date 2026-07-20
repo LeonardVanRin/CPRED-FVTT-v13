@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": ["value"]
+    },
+    "favorite": {
+      "type": "boolean",
+      "const": false
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "book": {
+            "type": "string"
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": ["page"]
+      }
+    }
+  },
+  "required": ["description", "favorite", "sources"]
+}
